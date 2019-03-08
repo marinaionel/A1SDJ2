@@ -11,18 +11,38 @@
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="599.0" style="-fx-alignment: center;" styleClass="back" stylesheets="@game.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox style="-fx-alignment: center;">
+         <children>
+            <Label styleClass="label-normal" text="Hello player ">
+               <HBox.margin>
+                  <Insets bottom="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="usernameLabel" styleClass="label-normal" text="username">
+               <HBox.margin>
+                  <Insets bottom="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox style="-fx-alignment: center;">
          <VBox.margin>
             <Insets bottom="5.0" />
          </VBox.margin>
          <children>
-            <Label id="youareplayer" text="You are player ">
+            <Label styleClass="label-normal" text="You are player ">
                <effect>
                   <Glow />
                </effect>
                <font>
                   <Font size="16.0" />
                </font></Label>
-            <Label id="xolabel" fx:id="playerType" text="X">
+            <Label fx:id="playerType" styleClass="label-normal" text="X">
                <effect>
                   <Glow />
                </effect>
@@ -31,7 +51,7 @@
                </font></Label>
          </children>
       </HBox>
-      <Label id="turn" text="turn" textFill="RED">
+      <Label fx:id="turn" styleClass="label-normal" text="turn" textFill="RED">
          <VBox.margin>
             <Insets bottom="10.0" />
          </VBox.margin>
@@ -125,7 +145,7 @@
       </HBox>
       <HBox prefHeight="52.0" prefWidth="599.0" style="-fx-alignment: center;">
          <children>
-            <Label id="winnerlabel" text="WinnerLabel" textAlignment="CENTER" textFill="RED">
+            <Label styleClass="label-normal" text="WinnerLabel" textAlignment="CENTER" textFill="RED">
                <font>
                   <Font name="System Bold" size="26.0" />
                </font>

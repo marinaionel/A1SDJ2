@@ -22,7 +22,20 @@
     -fx-text-fill: derive(cyan, -20%);
 }
 
-#playerlabel {
+#playerlabel, .text-field, #usernamelabel {
+    -fx-text-alignment: center;
     -fx-font-family: "Eras Medium ITC";
     -fx-text-fill: cyan;
+}
+
+.text-field {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-background-color: transparent;
+    -fx-border-radius: 50%;
+    -fx-border-color: cyan;
+}
+
+.text-field:focused{
+    -fx-background-color: derive(darkblue, -20%);;
 }

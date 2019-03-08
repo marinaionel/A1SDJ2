@@ -3,7 +3,7 @@
     -fx-background-color: darkblue;
 }
 
-#winnerlabel, #youareplayer, #xolabel, #turn {
+.label-normal {
     -fx-text-fill: cyan;
     -fx-font-family: "Eras Medium ITC";
 }
