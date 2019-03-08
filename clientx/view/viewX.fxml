@@ -29,23 +29,59 @@
       </Label>
       <HBox style="-fx-alignment: center;">
          <children>
-            <Button fx:id="r1c1" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" />
-            <Button fx:id="r1c2" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" />
-            <Button fx:id="r1c3" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" />
+            <Button fx:id="r1c1" maxHeight="130.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" textFill="RED">
+               <font>
+                  <Font size="53.0" />
+               </font>
+            </Button>
+            <Button fx:id="r1c2" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" textFill="RED">
+               <font>
+                  <Font size="53.0" />
+               </font>
+            </Button>
+            <Button fx:id="r1c3" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" textFill="RED">
+               <font>
+                  <Font size="53.0" />
+               </font>
+            </Button>
          </children>
       </HBox>
       <HBox style="-fx-alignment: center;">
          <children>
-            <Button mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" />
-            <Button mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" />
-            <Button mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" />
+            <Button fx:id="r2c1" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" textFill="RED">
+               <font>
+                  <Font size="53.0" />
+               </font>
+            </Button>
+            <Button fx:id="r2c2" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" textFill="RED">
+               <font>
+                  <Font size="53.0" />
+               </font>
+            </Button>
+            <Button fx:id="r2c3" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" textFill="RED">
+               <font>
+                  <Font size="53.0" />
+               </font>
+            </Button>
          </children>
       </HBox>
       <HBox layoutX="10.0" layoutY="140.0" style="-fx-alignment: center;">
          <children>
-            <Button mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" />
-            <Button mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" />
-            <Button mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" />
+            <Button fx:id="r3c1" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" textFill="RED">
+               <font>
+                  <Font size="53.0" />
+               </font>
+            </Button>
+            <Button fx:id="r3c2" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" textFill="RED">
+               <font>
+                  <Font size="53.0" />
+               </font>
+            </Button>
+            <Button fx:id="r3c3" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" textFill="RED">
+               <font>
+                  <Font size="53.0" />
+               </font>
+            </Button>
          </children>
       </HBox>
       <HBox prefHeight="52.0" prefWidth="599.0" style="-fx-alignment: center;">
