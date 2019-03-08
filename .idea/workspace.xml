@@ -2,14 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62805939-079e-4dd0-927d-535ffab00b3b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/javafx_swt.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/clientX/view/results/results.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/clientX/model/Model.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/clientX/view/game/GameView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/clientX/view/lobby/LobbyView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/clientX/view/results/ResultsView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/A1SDJ2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/A1SDJ2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/clientX/view/game/game.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/clientX/view/game/game.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/clientX/view/lobby/lobby.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/clientX/view/lobby/lobby.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/clientX/view/lobby/lobby.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/clientX/view/lobby/lobby.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/clientX/view/results/results.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/clientX/view/results/results.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientx/.idea/clientx.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientx/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientx/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientx/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientx/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientx/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,32 +26,57 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/clientX/view/lobby/lobby.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="21" column="37" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="37" />
+            <state relative-caret-position="221">
+              <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/clientX/view/results/results.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
+        <entry file="file://$PROJECT_DIR$/src/clientX/view/game/GameView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="27" column="31" lean-forward="true" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+            <state relative-caret-position="69">
+              <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/clientX/view/lobby/LobbyView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/clientX/view/results/ResultsView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/clientX/view/results/results.css">
+        <entry file="file://$PROJECT_DIR$/src/clientX/model/Model.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+            <state relative-caret-position="92">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -59,6 +88,7 @@
         <option value="$PROJECT_DIR$/src/clientX/view/lobby/lobby.fxml" />
         <option value="$PROJECT_DIR$/src/clientX/view/lobby/lobby.css" />
         <option value="$PROJECT_DIR$/src/clientX/view/results/results.css" />
+        <option value="$PROJECT_DIR$/src/clientX/view/game/GameView.java" />
       </list>
     </option>
   </component>
@@ -66,6 +96,9 @@
     <option name="x" value="-10" />
     <option name="width" value="980" />
     <option name="height" value="1040" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -136,7 +169,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552061019010" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552061955105" />
     <property name="last_opened_file_path" value="$USER_HOME$/Documents/openjfx-11.0.2_windows-x64_bin-sdk/javafx-sdk-11.0.2/lib/src.zip!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -167,12 +200,12 @@
       <option name="presentableId" value="Default" />
       <updated>1552041304477</updated>
       <workItem from="1552041306232" duration="1407000" />
-      <workItem from="1552056945523" duration="3507000" />
+      <workItem from="1552056945523" duration="4386000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4914000" />
+    <option name="totallyTimeSpent" value="5793000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -243,6 +276,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/clientX/view/results/results.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/clientX/view/results/results.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
@@ -253,15 +293,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/clientX/view/lobby/lobby.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="21" column="37" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="37" />
+        <state relative-caret-position="221">
+          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/clientX/view/results/results.css">
+    <entry file="file://$PROJECT_DIR$/src/clientX/view/game/GameView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+        <state relative-caret-position="69">
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/clientX/view/lobby/LobbyView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/clientX/view/results/ResultsView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/clientX/model/Model.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
