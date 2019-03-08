@@ -1,11 +1,13 @@
-.back{
+.back {
     -fx-alignment: center;
     -fx-background-color: darkblue;
 }
-#winnerlabel, #youareplayer, #xolabel, #turn{
+
+#winnerlabel, #youareplayer, #xolabel, #turn {
     -fx-text-fill: cyan;
     -fx-font-family: "Eras Medium ITC";
 }
+
 .playbuttons {
     -fx-font-family: "Eras Medium ITC";
     -fx-text-alignment: center;
@@ -16,6 +18,7 @@
     -fx-faint-focus-color: transparent;
     -fx-background-color: transparent;
 }
+
 .playbuttons:hover {
     -fx-border-color: derive(cyan, -20%);
     -fx-text-fill: derive(cyan, -20%);

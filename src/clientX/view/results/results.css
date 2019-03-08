@@ -1,8 +1,34 @@
-#back{
+#back {
     -fx-background-color: darkblue;
     -fx-alignment: center;
 }
-#titleresults{
+
+#titleresults {
     -fx-text-fill: cyan;
     -fx-font-family: "Eras Medium ITC";
+}
+
+.table-view {
+    -fx-font-family: "Eras Medium ITC";
+    -fx-text-alignment: center;
+    -fx-text-fill: cyan;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.table-view:focused {
+    -fx-background-color: derive(cyan, -20%);
+}
+
+.table-column, .table-column:last-visible {
+    -fx-background-color: cyan;
+    -fx-text-fill: white;
+    -fx-font-size: 1.5em;
+}
+
+.table-view:row-selection, .placeholder {
+    -fx-font-family: "Eras Medium ITC";
+    -fx-text-fill: cyan;
+    -fx-text-alignment: center;
 }
