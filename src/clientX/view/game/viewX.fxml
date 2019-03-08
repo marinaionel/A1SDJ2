@@ -3,23 +3,35 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="599.0" style="-fx-alignment: center;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="599.0" style="-fx-alignment: center;" styleClass="back" stylesheets="@game.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox style="-fx-alignment: center;">
          <VBox.margin>
             <Insets bottom="5.0" />
          </VBox.margin>
          <children>
-            <Label text="You are player " />
-            <Label fx:id="playerType" text="X" />
+            <Label id="youareplayer" text="You are player ">
+               <effect>
+                  <Glow />
+               </effect>
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Label id="xolabel" fx:id="playerType" text="X">
+               <effect>
+                  <Glow />
+               </effect>
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
          </children>
       </HBox>
-      <Label text="turn" textFill="RED">
+      <Label id="turn" text="turn" textFill="RED">
          <VBox.margin>
             <Insets bottom="10.0" />
          </VBox.margin>
@@ -29,67 +41,97 @@
       </Label>
       <HBox style="-fx-alignment: center;">
          <children>
-            <Button fx:id="r1c1" maxHeight="130.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" textFill="RED">
+            <Button fx:id="r1c1" maxHeight="130.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" styleClass="playbuttons" textFill="RED">
                <font>
                   <Font size="53.0" />
                </font>
+               <effect>
+                  <Glow />
+               </effect>
             </Button>
-            <Button fx:id="r1c2" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" textFill="RED">
+            <Button fx:id="r1c2" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" styleClass="playbuttons" textFill="RED">
                <font>
                   <Font size="53.0" />
                </font>
+               <effect>
+                  <Glow />
+               </effect>
             </Button>
-            <Button fx:id="r1c3" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" textFill="RED">
+            <Button fx:id="r1c3" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" styleClass="playbuttons" textFill="RED">
                <font>
                   <Font size="53.0" />
                </font>
+               <effect>
+                  <Glow />
+               </effect>
             </Button>
          </children>
       </HBox>
       <HBox style="-fx-alignment: center;">
          <children>
-            <Button fx:id="r2c1" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" textFill="RED">
+            <Button fx:id="r2c1" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" styleClass="playbuttons" textFill="RED">
                <font>
                   <Font size="53.0" />
                </font>
+               <effect>
+                  <Glow />
+               </effect>
             </Button>
-            <Button fx:id="r2c2" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" textFill="RED">
+            <Button fx:id="r2c2" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" styleClass="playbuttons" textFill="RED">
                <font>
                   <Font size="53.0" />
                </font>
+               <effect>
+                  <Glow />
+               </effect>
             </Button>
-            <Button fx:id="r2c3" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" textFill="RED">
+            <Button fx:id="r2c3" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" styleClass="playbuttons" textFill="RED">
                <font>
                   <Font size="53.0" />
                </font>
+               <effect>
+                  <Glow />
+               </effect>
             </Button>
          </children>
       </HBox>
       <HBox layoutX="10.0" layoutY="140.0" style="-fx-alignment: center;">
          <children>
-            <Button fx:id="r3c1" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" textFill="RED">
+            <Button fx:id="r3c1" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" styleClass="playbuttons" textFill="RED">
                <font>
                   <Font size="53.0" />
                </font>
+               <effect>
+                  <Glow />
+               </effect>
             </Button>
-            <Button fx:id="r3c2" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" textFill="RED">
+            <Button fx:id="r3c2" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" styleClass="playbuttons" textFill="RED">
                <font>
                   <Font size="53.0" />
                </font>
+               <effect>
+                  <Glow />
+               </effect>
             </Button>
-            <Button fx:id="r3c3" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" textFill="RED">
+            <Button fx:id="r3c3" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" styleClass="playbuttons" textFill="RED">
                <font>
                   <Font size="53.0" />
                </font>
+               <effect>
+                  <Glow />
+               </effect>
             </Button>
          </children>
       </HBox>
       <HBox prefHeight="52.0" prefWidth="599.0" style="-fx-alignment: center;">
          <children>
-            <Label text="WinnerLabel" textAlignment="CENTER" textFill="RED">
+            <Label id="winnerlabel" text="WinnerLabel" textAlignment="CENTER" textFill="RED">
                <font>
                   <Font name="System Bold" size="26.0" />
                </font>
+               <effect>
+                  <Glow />
+               </effect>
             </Label>
          </children>
       </HBox>

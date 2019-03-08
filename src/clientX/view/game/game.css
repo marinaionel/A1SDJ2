@@ -1,28 +1,22 @@
-.back {
+.back{
     -fx-alignment: center;
     -fx-background-color: darkblue;
 }
-
-.playbutton {
-    -fx-font-size: 2em;
+#winnerlabel, #youareplayer, #xolabel, #turn{
+    -fx-text-fill: cyan;
+    -fx-font-family: "Eras Medium ITC";
+}
+.playbuttons {
     -fx-font-family: "Eras Medium ITC";
     -fx-text-alignment: center;
     -fx-border-width: 2px;
     -fx-border-color: cyan;
     -fx-text-fill: cyan;
-    -fx-border-radius: 50%;
-    -fx-padding: 1em 2em 0.9em 2em;
     -fx-focus-color: transparent;
     -fx-faint-focus-color: transparent;
     -fx-background-color: transparent;
 }
-
-.playbutton:hover {
+.playbuttons:hover {
     -fx-border-color: derive(cyan, -20%);
     -fx-text-fill: derive(cyan, -20%);
-}
-
-.playerLabel {
-    -fx-font-family: "Eras Medium ITC";
-    -fx-text-fill: cyan;
 }
