@@ -7,16 +7,18 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="400.0" style="-fx-alignment: center; -fx-background-color: darkblue;" styleClass="back" stylesheets="@lobby.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="400.0" styleClass="back" stylesheets="@lobby.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label fx:id="playerLabel" text="playerLabel" textFill="WHITE">
+      <Label fx:id="playerLabel" styleClass="playerLabel" text="playerLabel" textFill="WHITE">
          <VBox.margin>
             <Insets bottom="20.0" />
          </VBox.margin>
          <effect>
             <Glow />
          </effect>
+         <font>
+            <Font size="16.0" />
+         </font>
       </Label>
       <Button fx:id="playButton" mnemonicParsing="false" prefHeight="39.0" prefWidth="344.0" styleClass="playbutton" stylesheets="@lobby.css" text="PLAY">
          <font>

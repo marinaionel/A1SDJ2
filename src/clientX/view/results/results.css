@@ -1,0 +1,8 @@
+#back{
+    -fx-background-color: darkblue;
+    -fx-alignment: center;
+}
+#titleresults{
+    -fx-text-fill: cyan;
+    -fx-font-family: "Eras Medium ITC";
+}
