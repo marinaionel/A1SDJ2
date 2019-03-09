@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62805939-079e-4dd0-927d-535ffab00b3b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/A1SDJ2/client/networking/SocketHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A1SDJ2/client/networking/SocketHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A1SDJ2/client/view/lobby/lobby.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A1SDJ2/client/view/lobby/lobby.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/view/lobby/lobby.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/view/lobby/lobby.css" afterDir="false" />
-    </list>
+    <list default="true" id="62805939-079e-4dd0-927d-535ffab00b3b" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,10 +10,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/client/viewModel/lobby/LobbyViewModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
+            <state relative-caret-position="221">
               <caret line="26" column="57" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -26,15 +22,6 @@
                 <element signature="e#516#517#0" expanded="true" />
                 <element signature="e#567#568#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/client/view/lobby/lobby.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="39" column="46" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -106,7 +93,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="951" />
     <option name="width" value="978" />
     <option name="height" value="1039" />
@@ -204,7 +191,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552154749470" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552154846441" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../SDJ2" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -295,12 +282,12 @@
       <workItem from="1552041306232" duration="1407000" />
       <workItem from="1552056945523" duration="9211000" />
       <workItem from="1552122818509" duration="3930000" />
-      <workItem from="1552138307472" duration="16416000" />
+      <workItem from="1552138307472" duration="16520000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30964000" />
+    <option name="totallyTimeSpent" value="31068000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -316,7 +303,7 @@
       <window_info anchor="bottom" id="Messages" weight="0.3286119" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -667,9 +654,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/view/lobby/lobby.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="39" column="46" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/viewModel/lobby/LobbyViewModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
+        <state relative-caret-position="221">
           <caret line="26" column="57" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -678,13 +672,6 @@
             <element signature="e#516#517#0" expanded="true" />
             <element signature="e#567#568#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/view/lobby/lobby.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="39" column="46" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
         </state>
       </provider>
     </entry>
