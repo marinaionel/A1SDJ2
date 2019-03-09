@@ -1,4 +1,6 @@
-package shared.model;
+package server.model;
+
+import server.PlayerHandler;
 
 public class Game {
     public enum Sign {
@@ -9,7 +11,7 @@ public class Game {
 
     private Sign[][] gameArray;
 
-    public Game() {
+    public Game(PlayerHandler player1, PlayerHandler player2) {
         gameArray = new Sign[][]{
                 {Sign.EMPTY, Sign.EMPTY, Sign.EMPTY},
                 {Sign.EMPTY, Sign.EMPTY, Sign.EMPTY},
@@ -19,6 +21,9 @@ public class Game {
     public void place(int row, int column, Sign sign) {
         gameArray[row][column] = sign;
     }
+
+
+
 
     public Sign getPlace(int row, int column) {
         return gameArray[row][column];
