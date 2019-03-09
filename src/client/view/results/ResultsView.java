@@ -1,6 +1,6 @@
-package clientX.view.results;
+package client.view.results;
 
-import clientX.viewModel.results.ResultsViewModel;
+import client.viewModel.results.ResultsViewModel;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;

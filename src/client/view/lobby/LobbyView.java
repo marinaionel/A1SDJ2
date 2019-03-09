@@ -1,5 +1,6 @@
-package clientX.view.lobby;
+package client.view.lobby;
 
+import client.viewModel.lobby.LobbyViewModel;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -12,4 +13,10 @@ public class LobbyView {
     Button playButton;
     @FXML
     TextField usernamefield;
+    public void onPlayButton() {
+
+    };
+
+    public void init(LobbyViewModel lobbyViewModel) {
+    }
 }

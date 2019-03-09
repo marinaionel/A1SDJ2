@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="323.0" prefWidth="400.0" style="-fx-alignment: center; -fx-background-color: darkblue;" styleClass="back" stylesheets="@lobby.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientX.view.lobby.LobbyView">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="323.0" prefWidth="400.0" style="-fx-alignment: center; -fx-background-color: darkblue;" styleClass="back" stylesheets="@lobby.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.view.lobby.LobbyView">
     <children>
       <Label id="usernamelabel" text="Write your username here">
          <VBox.margin>
@@ -34,7 +34,7 @@
             <Font size="17.0" />
          </font>
         </Label>
-        <Button fx:id="playButton" mnemonicParsing="false" prefHeight="39.0" prefWidth="344.0" styleClass="playbutton" stylesheets="@lobby.css" text="PLAY">
+        <Button fx:id="playButton" mnemonicParsing="false" onAction="#onPlayButton" prefHeight="39.0" prefWidth="344.0" styleClass="playbutton" stylesheets="@lobby.css" text="PLAY">
             <font>
                 <Font size="34.0" />
             </font>

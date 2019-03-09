@@ -5,6 +5,7 @@ import shared.model.RequestCodes;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.Socket;
 
 public class PlayerHandler implements Runnable {
@@ -12,20 +13,31 @@ public class PlayerHandler implements Runnable {
     private Socket socket;
     private boolean isInGame;
     private Game.Sign sign;
+    ObjectInputStream socketIn = null;
+    ObjectOutputStream socketOut = null;
+    private String playerName;
+
 
     public PlayerHandler(Socket socket) {
         this.socket = socket;
     }
 
-    public void joinGame() {
+    public void joinGame(Game.Sign sign) {
+        this.sign=sign;
+        isInGame=true;
+        try {
+            socketOut.writeUTF(RequestCodes.JOINED_GAME+"|"+(sign==Game.Sign.ZERO?"O":"X"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void run() {
-        ObjectInputStream socketIn = null;
         String request = "";
         try {
             socketIn = new ObjectInputStream(socket.getInputStream());
+            socketOut=new ObjectOutputStream(socket.getOutputStream());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -36,15 +48,22 @@ public class PlayerHandler implements Runnable {
                 e.printStackTrace();
             }
 
-            switch (request) {
-                case RequestCodes.PLAY:
-                    GameCreator.tryPlay(this);
-                    break;
-                default:
-                    System.out.println("did not understood u m8");
-                    break;
+            if(request.contains(RequestCodes.PLAY)){
+                playerName=request.split("|")[1];
+                GameCreator.tryPlay(this);
             }
+
+
+//            switch (request) {
+//                default:
+//                    System.out.println("did not understood u m8");
+//                    break;
+//            }
         }
+    }
+
+    public  String getPlayerName(){
+        return playerName;
     }
 
 }

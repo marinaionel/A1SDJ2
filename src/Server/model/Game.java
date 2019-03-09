@@ -2,9 +2,11 @@ package server.model;
 
 import server.PlayerHandler;
 
+//This class is responsible for managing a game (validate inputs, notify players that the game started etc.)
 public class Game {
+
     public enum Sign {
-        EMPTY,
+        EMPTY ,
         CROSS,
         ZERO
     }
@@ -12,6 +14,8 @@ public class Game {
     private Sign[][] gameArray;
 
     public Game(PlayerHandler player1, PlayerHandler player2) {
+        player1.joinGame(Sign.CROSS);
+        player2.joinGame(Sign.ZERO);
         gameArray = new Sign[][]{
                 {Sign.EMPTY, Sign.EMPTY, Sign.EMPTY},
                 {Sign.EMPTY, Sign.EMPTY, Sign.EMPTY},

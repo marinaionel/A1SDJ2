@@ -1,5 +1,6 @@
-package clientX.view.game;
+package client.view.game;
 
+import client.viewModel.game.GameViewModel;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -57,5 +58,8 @@ public class GameView {
     }
 
     public void placer3c3() {
+    }
+
+    public void init(GameViewModel gameViewModel) {
     }
 }

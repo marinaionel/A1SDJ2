@@ -1,4 +1,4 @@
-package clientX.viewModel;
+package client;
 
 import javafx.application.Application;
 

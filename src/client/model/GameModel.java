@@ -1,13 +1,13 @@
-package clientX.model;
+package client.model;
 
-import clientX.networking.Client;
+import client.networking.iClient;
 
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 
 public class GameModel implements Model {
     private PropertyChangeSupport support = new PropertyChangeSupport(this);
-    private Client client;
+    private iClient iClient;
 
     public GameModel() {
     }
@@ -22,7 +22,7 @@ public class GameModel implements Model {
     }
 
     @Override
-    public void setClient(Client client) {
-        this.client = client;
+    public void setiClient(iClient iClient) {
+        this.iClient = iClient;
     }
 }

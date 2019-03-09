@@ -1,12 +1,14 @@
-package clientX.model;
+package client.model;
 
-import clientX.networking.Client;
+import client.networking.iClient;
 
 import java.beans.PropertyChangeListener;
 
 public interface Model {
     void addListener(String name, PropertyChangeListener listener);
 
-    public void setClient(Client client);
+    public void setiClient(iClient iClient);
+
+    public iClient getiClient();
 
 }
