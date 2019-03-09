@@ -9,11 +9,13 @@ public class GameCreator {
     private static PlayerHandler waitingPlayer = null;
 
     public static void tryPlay(PlayerHandler player) {
-        System.out.println(player.getPlayerName()+" wants to play...");
         if (waitingPlayer != null) {
+            System.out.println(player.getPlayerName()+" wants to play...");
+            System.out.println("Game started");
             new Game(waitingPlayer, player);
             waitingPlayer = null;
         } else {
+            System.out.println(player.getPlayerName()+" wants to play...");
             waitingPlayer = player;
         }
     }

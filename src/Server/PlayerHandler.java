@@ -47,18 +47,13 @@ public class PlayerHandler implements Runnable {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
+System.out.println(request);
             if(request.contains(RequestCodes.PLAY)){
                 playerName=request.split("|")[1];
                 GameCreator.tryPlay(this);
             }
 
 
-//            switch (request) {
-//                default:
-//                    System.out.println("did not understood u m8");
-//                    break;
-//            }
         }
     }
 

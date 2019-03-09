@@ -1,6 +1,5 @@
 package client.viewModel.results;
 
-import client.model.GameModel;
 import client.model.Model;
 import client.view.ViewHandler;
 import javafx.beans.property.ListProperty;
@@ -22,5 +21,6 @@ public class ResultsViewModel {
     public ListProperty<Player> getItemsList() {
         return listOfPlayers;
     }
+
 
 }

@@ -25,4 +25,9 @@ public class GameModel implements Model {
     public void setiClient(iClient iClient) {
         this.iClient = iClient;
     }
+
+    @Override
+    public iClient getiClient() {
+        return this.iClient;
+    }
 }

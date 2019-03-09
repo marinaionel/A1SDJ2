@@ -22,6 +22,6 @@ public class ResultsView {
         this.resultsViewModel = resultsViewModel;
         playerColumn.setCellValueFactory(new PropertyValueFactory<>("Player"));
         scoreColumn.setCellValueFactory(new PropertyValueFactory<>("Score"));
-        tableView.itemsProperty().bind((ObservableValue<? extends ObservableList<String>>) resultsViewModel.getItemsList());
+//        tableView.itemsProperty().bind((ObservableValue<? extends ObservableList<String>>) resultsViewModel.getItemsList());
     }
 }

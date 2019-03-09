@@ -17,7 +17,7 @@ public class ViewHandler {
     private Stage mainStage;
 
     public ViewHandler(Stage stage, Model model) {
-        this.mainStage = stage;
+        mainStage = stage;
         viewModelProvider = new ViewModelProvider(model, this);
     }
 
@@ -28,7 +28,7 @@ public class ViewHandler {
     public void openLobby() {
         FXMLLoader loader = new FXMLLoader();
 
-        loader.setLocation(getClass().getResource("client/view/lobby/lobby.fxml"));
+        loader.setLocation(getClass().getResource("lobby/lobby.fxml"));
         Parent root = null;
         try {
             root = loader.load();
@@ -47,7 +47,7 @@ public class ViewHandler {
     public void openGame() {
         FXMLLoader loader = new FXMLLoader();
 
-        loader.setLocation(getClass().getResource("client/view/game/game.fxml"));
+        loader.setLocation(getClass().getResource("game/game.fxml"));
         Parent root = null;
         try {
             root = loader.load();
@@ -66,7 +66,7 @@ public class ViewHandler {
     public void openResults() {
         FXMLLoader loader = new FXMLLoader();
 
-        loader.setLocation(getClass().getResource("client/view/results/results.fxml"));
+        loader.setLocation(getClass().getResource("results/results.fxml"));
         Parent root = null;
         try {
             root = loader.load();

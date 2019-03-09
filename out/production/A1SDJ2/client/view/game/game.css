@@ -1,0 +1,25 @@
+.back {
+    -fx-alignment: center;
+    -fx-background-color: darkblue;
+}
+
+.label-normal {
+    -fx-text-fill: cyan;
+    -fx-font-family: "Eras Medium ITC";
+}
+
+.playbuttons {
+    -fx-font-family: "Eras Medium ITC";
+    -fx-text-alignment: center;
+    -fx-border-width: 2px;
+    -fx-border-color: cyan;
+    -fx-text-fill: cyan;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.playbuttons:hover {
+    -fx-border-color: derive(cyan, -20%);
+    -fx-text-fill: derive(cyan, -20%);
+}

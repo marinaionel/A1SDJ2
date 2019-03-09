@@ -13,10 +13,14 @@ public class LobbyView {
     Button playButton;
     @FXML
     TextField usernamefield;
-    public void onPlayButton() {
+    private LobbyViewModel lobbyViewModel;
 
-    };
+    public void onPlayButton() {
+        lobbyViewModel.startGame();
+    }
 
     public void init(LobbyViewModel lobbyViewModel) {
+        this.lobbyViewModel = lobbyViewModel;
+//        lobbyViewModel.usernameProperty().bindBidirectional(usernamefield.textProperty());
     }
 }

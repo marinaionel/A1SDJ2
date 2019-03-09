@@ -30,6 +30,7 @@ public class SocketHandler implements Runnable {
     public void startGame(String playerName){
         try {
             outToServer.writeUTF(RequestCodes.PLAY+"|"+playerName);
+            outToServer.flush();
         } catch (IOException e) {
             e.printStackTrace();
         }
