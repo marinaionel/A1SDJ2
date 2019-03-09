@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="599.0" style="-fx-alignment: center;" styleClass="back" stylesheets="@game.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="599.0" style="-fx-alignment: center;" styleClass="back" stylesheets="@game.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientX.view.game.GameView">
    <children>
       <HBox style="-fx-alignment: center;">
          <children>
@@ -61,7 +61,7 @@
       </Label>
       <HBox style="-fx-alignment: center;">
          <children>
-            <Button fx:id="r1c1" maxHeight="130.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" styleClass="playbuttons" textFill="RED">
+            <Button fx:id="r1c1" maxHeight="130.0" mnemonicParsing="false" onAction="#placer1c1" prefHeight="130.0" prefWidth="130.0" styleClass="playbuttons" textFill="RED">
                <font>
                   <Font size="53.0" />
                </font>
@@ -69,7 +69,7 @@
                   <Glow />
                </effect>
             </Button>
-            <Button fx:id="r1c2" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" styleClass="playbuttons" textFill="RED">
+            <Button fx:id="r1c2" mnemonicParsing="false" onAction="#placer1c2" prefHeight="130.0" prefWidth="130.0" styleClass="playbuttons" textFill="RED">
                <font>
                   <Font size="53.0" />
                </font>
@@ -77,7 +77,7 @@
                   <Glow />
                </effect>
             </Button>
-            <Button fx:id="r1c3" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" styleClass="playbuttons" textFill="RED">
+            <Button fx:id="r1c3" mnemonicParsing="false" onAction="#placer1c3" prefHeight="130.0" prefWidth="130.0" styleClass="playbuttons" textFill="RED">
                <font>
                   <Font size="53.0" />
                </font>
@@ -89,7 +89,7 @@
       </HBox>
       <HBox style="-fx-alignment: center;">
          <children>
-            <Button fx:id="r2c1" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" styleClass="playbuttons" textFill="RED">
+            <Button fx:id="r2c1" mnemonicParsing="false" onAction="#placer2c1" prefHeight="130.0" prefWidth="130.0" styleClass="playbuttons" textFill="RED">
                <font>
                   <Font size="53.0" />
                </font>
@@ -97,7 +97,7 @@
                   <Glow />
                </effect>
             </Button>
-            <Button fx:id="r2c2" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" styleClass="playbuttons" textFill="RED">
+            <Button fx:id="r2c2" mnemonicParsing="false" onAction="#placer2c2" prefHeight="130.0" prefWidth="130.0" styleClass="playbuttons" textFill="RED">
                <font>
                   <Font size="53.0" />
                </font>
@@ -105,7 +105,7 @@
                   <Glow />
                </effect>
             </Button>
-            <Button fx:id="r2c3" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" styleClass="playbuttons" textFill="RED">
+            <Button fx:id="r2c3" mnemonicParsing="false" onAction="#placer2c3" prefHeight="130.0" prefWidth="130.0" styleClass="playbuttons" textFill="RED">
                <font>
                   <Font size="53.0" />
                </font>
@@ -117,7 +117,7 @@
       </HBox>
       <HBox layoutX="10.0" layoutY="140.0" style="-fx-alignment: center;">
          <children>
-            <Button fx:id="r3c1" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" styleClass="playbuttons" textFill="RED">
+            <Button fx:id="r3c1" mnemonicParsing="false" onAction="#placer3c1" prefHeight="130.0" prefWidth="130.0" styleClass="playbuttons" textFill="RED">
                <font>
                   <Font size="53.0" />
                </font>
@@ -125,7 +125,7 @@
                   <Glow />
                </effect>
             </Button>
-            <Button fx:id="r3c2" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" styleClass="playbuttons" textFill="RED">
+            <Button fx:id="r3c2" mnemonicParsing="false" onAction="#placer3c2" prefHeight="130.0" prefWidth="130.0" styleClass="playbuttons" textFill="RED">
                <font>
                   <Font size="53.0" />
                </font>
@@ -133,7 +133,7 @@
                   <Glow />
                </effect>
             </Button>
-            <Button fx:id="r3c3" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" styleClass="playbuttons" textFill="RED">
+            <Button fx:id="r3c3" mnemonicParsing="false" onAction="#placer3c3" prefHeight="130.0" prefWidth="130.0" styleClass="playbuttons" textFill="RED">
                <font>
                   <Font size="53.0" />
                </font>
@@ -145,7 +145,7 @@
       </HBox>
       <HBox prefHeight="52.0" prefWidth="599.0" style="-fx-alignment: center;">
          <children>
-            <Label styleClass="label-normal" text="WinnerLabel" textAlignment="CENTER" textFill="RED">
+            <Label fx:id="winnerLabel" styleClass="label-normal" text="WinnerLabel" textAlignment="CENTER" textFill="RED">
                <font>
                   <Font name="System Bold" size="26.0" />
                </font>
