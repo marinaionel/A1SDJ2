@@ -18,8 +18,8 @@
 }
 
 .playbutton:hover {
-    -fx-border-color: derive(cyan, -20%);
-    -fx-text-fill: derive(cyan, -20%);
+    -fx-border-color: derive(cyan, -50%);
+    -fx-text-fill: derive(cyan, -50%);
 }
 
 #playerlabel, .text-field, #usernamelabel {
