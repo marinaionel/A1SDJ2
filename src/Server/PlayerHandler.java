@@ -1,6 +1,6 @@
 package server;
 
-import server.model.Game;
+import shared.model.Game;
 import shared.model.RequestCodes;
 
 import java.io.IOException;
@@ -16,17 +16,17 @@ public class PlayerHandler implements Runnable {
     ObjectInputStream socketIn = null;
     ObjectOutputStream socketOut = null;
     private String playerName;
-
+    private boolean tryPlayResult;
 
     public PlayerHandler(Socket socket) {
         this.socket = socket;
     }
 
     public void joinGame(Game.Sign sign) {
-        this.sign=sign;
-        isInGame=true;
+        this.sign = sign;
+        isInGame = true;
         try {
-            socketOut.writeUTF(RequestCodes.JOINED_GAME+"|"+(sign==Game.Sign.ZERO?"O":"X"));
+            socketOut.writeUTF(RequestCodes.JOINED_GAME + "|" + (sign == Game.Sign.ZERO ? "O" : "X"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -37,7 +37,7 @@ public class PlayerHandler implements Runnable {
         String request = "";
         try {
             socketIn = new ObjectInputStream(socket.getInputStream());
-            socketOut=new ObjectOutputStream(socket.getOutputStream());
+            socketOut = new ObjectOutputStream(socket.getOutputStream());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -47,17 +47,24 @@ public class PlayerHandler implements Runnable {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-System.out.println(request);
-            if(request.contains(RequestCodes.PLAY)){
-                playerName=request.split("|")[1];
-                GameCreator.tryPlay(this);
+            System.out.println(request);
+
+            if (request.contains(RequestCodes.PLAY)) {
+                playerName = request.split("|")[1];
+                tryPlayResult = GameCreator.tryPlay(this);
+                try {
+                    socketOut.writeUTF(tryPlayResult ? RequestCodes.OPPONENT_FOUND : RequestCodes.WAITING_FOR_OPPONENT);
+                    socketOut.flush();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
 
 
         }
     }
 
-    public  String getPlayerName(){
+    public String getPlayerName() {
         return playerName;
     }
 

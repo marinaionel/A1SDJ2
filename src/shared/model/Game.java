@@ -1,4 +1,4 @@
-package server.model;
+package shared.model;
 
 import server.PlayerHandler;
 
@@ -13,9 +13,7 @@ public class Game {
 
     private Sign[][] gameArray;
 
-    public Game(PlayerHandler player1, PlayerHandler player2) {
-        player1.joinGame(Sign.CROSS);
-        player2.joinGame(Sign.ZERO);
+    public Game() {
         gameArray = new Sign[][]{
                 {Sign.EMPTY, Sign.EMPTY, Sign.EMPTY},
                 {Sign.EMPTY, Sign.EMPTY, Sign.EMPTY},
@@ -25,9 +23,6 @@ public class Game {
     public void place(int row, int column, Sign sign) {
         gameArray[row][column] = sign;
     }
-
-
-
 
     public Sign getPlace(int row, int column) {
         return gameArray[row][column];

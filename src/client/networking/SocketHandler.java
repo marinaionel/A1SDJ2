@@ -13,7 +13,7 @@ public class SocketHandler implements Runnable {
     private Client client;
 
     public SocketHandler(Socket socket, Client client) {
-        this.client=client;
+        this.client = client;
         try {
             this.outToServer = new ObjectOutputStream(socket.getOutputStream());
             this.inFromServer = new ObjectInputStream(socket.getInputStream());
@@ -24,12 +24,44 @@ public class SocketHandler implements Runnable {
 
     @Override
     public void run() {
+        String request = "";
+        while (true) {
+            try {
+                request = inFromServer.readUTF();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
+            //waiting for one more person to press PLAY in order to start the game
+            if (request.equals(RequestCodes.WAITING_FOR_OPPONENT)) {
+
+            }
+
+            //opponent found, the game begins
+            if (request.equals(RequestCodes.OPPONENT_FOUND)) {
+
+            }
+
+            //player tried to place, but it was in invalid move
+            if (request.equals(RequestCodes.CANT_PLACE)) {
+
+            }
+
+            //someone placed, the request has this form:    placed|column|row|sign
+            if (request.contains(RequestCodes.PLAYER_PLACED)) {
+
+            }
+
+
+            if (request.contains(RequestCodes.GAME_FINISHED)) {
+                
+            }
+        }
     }
 
-    public void startGame(String playerName){
+    public void startGame(String playerName) {
         try {
-            outToServer.writeUTF(RequestCodes.PLAY+"|"+playerName);
+            outToServer.writeUTF(RequestCodes.PLAY + "|" + playerName);
             outToServer.flush();
         } catch (IOException e) {
             e.printStackTrace();
