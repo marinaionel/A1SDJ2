@@ -1,17 +1,21 @@
 package client.networking;
 
+import client.model.Model;
+
 import java.io.IOException;
 import java.net.Socket;
 
-public class Client implements  iClient {
+public class Client implements iClient {
 
-    Socket socket;
-    SocketHandler socketHandler;
+    private Socket socket;
+    private SocketHandler socketHandler;
+    private Model model;
 
-    public Client() {
+    public Client(Model model) {
+        this.model = model;
         try {
-            socket = new Socket("localhost",1999);
-            socketHandler=new SocketHandler(socket,this);
+            socket = new Socket("localhost", 1999);
+            socketHandler = new SocketHandler(socket, this);
             new Thread(socketHandler).start();
         } catch (IOException e) {
             e.printStackTrace();
@@ -28,5 +32,10 @@ public class Client implements  iClient {
     @Override
     public void place(int row, int column) {
 
+    }
+
+    @Override
+    public void changeLabelStatus(String status) {
+        model.setLobbyStatus(status);
     }
 }

@@ -32,14 +32,24 @@ public class SocketHandler implements Runnable {
                 e.printStackTrace();
             }
 
+
+            System.out.println(request);
+
+
             //waiting for one more person to press PLAY in order to start the game
             if (request.equals(RequestCodes.WAITING_FOR_OPPONENT)) {
+                client.changeLabelStatus("Waiting for opponent...");
+                try {
+                    request = inFromServer.readUTF();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
 
             }
 
             //opponent found, the game begins
             if (request.equals(RequestCodes.OPPONENT_FOUND)) {
-
+                client.changeLabelStatus("Opponent found...");
             }
 
             //player tried to place, but it was in invalid move
@@ -54,7 +64,7 @@ public class SocketHandler implements Runnable {
 
 
             if (request.contains(RequestCodes.GAME_FINISHED)) {
-                
+
             }
         }
     }

@@ -9,6 +9,8 @@ public class GameModel implements Model {
     private PropertyChangeSupport support = new PropertyChangeSupport(this);
     private iClient iClient;
 
+    private String lobbyStatus;
+
     public GameModel() {
     }
 
@@ -19,6 +21,12 @@ public class GameModel implements Model {
         } else {
             support.addPropertyChangeListener(eventName, listener);
         }
+    }
+
+    @Override
+    public void setLobbyStatus(String status) {
+        lobbyStatus = status;
+        support.firePropertyChange("Lobby Status", null, status);
     }
 
     @Override

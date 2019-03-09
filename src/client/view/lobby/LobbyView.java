@@ -21,6 +21,8 @@ public class LobbyView {
 
     public void init(LobbyViewModel lobbyViewModel) {
         this.lobbyViewModel = lobbyViewModel;
-//        lobbyViewModel.usernameProperty().bindBidirectional(usernamefield.textProperty());
+        lobbyViewModel.usernameProperty().bindBidirectional(usernamefield.textProperty());
+        lobbyViewModel.lobbyStatusLabelProperty().bindBidirectional(playerLabel.textProperty());
+
     }
 }

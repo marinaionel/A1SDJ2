@@ -11,7 +11,7 @@ public class GameApplication extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         Model model = new GameModel();
-        Client client = new Client();
+        Client client = new Client(model);
         ViewHandler viewHandler = new ViewHandler(primaryStage, model);
         model.setiClient(client);
         viewHandler.start();

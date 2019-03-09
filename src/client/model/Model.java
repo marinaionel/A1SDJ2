@@ -7,8 +7,10 @@ import java.beans.PropertyChangeListener;
 public interface Model {
     void addListener(String name, PropertyChangeListener listener);
 
-    public void setiClient(iClient iClient);
+    void setLobbyStatus(String status);
 
-    public iClient getiClient();
+    void setiClient(iClient iClient);
+
+    iClient getiClient();
 
 }

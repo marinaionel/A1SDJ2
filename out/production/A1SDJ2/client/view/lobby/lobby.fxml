@@ -23,15 +23,15 @@
             <Glow />
          </effect>
       </TextField>
-        <Label id="playerlabel" fx:id="playerLabel" text="playerLabel" textFill="WHITE">
+        <Label id="playerlabel" fx:id="playerLabel" textFill="WHITE">
             <VBox.margin>
-                <Insets bottom="20.0" top="20.0" />
+                <Insets bottom="5.0" top="5.0" />
             </VBox.margin>
             <effect>
                 <Glow />
             </effect>
          <font>
-            <Font size="17.0" />
+            <Font size="14.0" />
          </font>
         </Label>
         <Button fx:id="playButton" mnemonicParsing="false" onAction="#onPlayButton" prefHeight="39.0" prefWidth="344.0" styleClass="playbutton" stylesheets="@lobby.css" text="PLAY">
