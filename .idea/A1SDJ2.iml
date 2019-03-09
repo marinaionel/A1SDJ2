@@ -10,5 +10,6 @@
     <orderEntry type="library" name="commons-io-2.6" level="application" />
     <orderEntry type="library" name="commons-lang3-3.8.1" level="application" />
     <orderEntry type="library" name="javafx-swt" level="project" />
+    <orderEntry type="library" name="lib" level="project" />
   </component>
 </module>

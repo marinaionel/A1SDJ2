@@ -61,11 +61,25 @@ public class PlayerHandler implements Runnable {
             }
 
 
+            if(request.contains(RequestCodes.TRY_PLACE))
+            {
+
+            }
+
+            if(request.contains(RequestCodes.WIN))
+            {
+
+            }
+
+
+
+
         }
     }
 
     public String getPlayerName() {
         return playerName;
     }
+
 
 }

@@ -1,6 +1,7 @@
 package client.model;
 
 import client.networking.iClient;
+import shared.model.Game;
 
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
@@ -8,6 +9,8 @@ import java.beans.PropertyChangeSupport;
 public class GameModel implements Model {
     private PropertyChangeSupport support = new PropertyChangeSupport(this);
     private iClient iClient;
+    private Game game;
+
 
     private String lobbyStatus;
 
@@ -38,4 +41,17 @@ public class GameModel implements Model {
     public iClient getiClient() {
         return this.iClient;
     }
+
+    @Override
+    public void updateBoard(Game game) {
+
+        support.firePropertyChange("Board update", null, game);
+    }
+
+    @Override
+    public void gameFinished() {
+
+    }
+
+
 }

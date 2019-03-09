@@ -11,4 +11,6 @@ public class GameViewModel {
         this.model = model;
         this.viewHandler = viewHandler;
     }
+
+
 }
