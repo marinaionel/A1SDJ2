@@ -15,7 +15,7 @@ public class ViewModelProvider {
     public ViewModelProvider(Model model, ViewHandler viewHandler) {
         gameViewModel = new GameViewModel(model, viewHandler);
         lobbyViewModel = new LobbyViewModel(model, viewHandler);
-        resultsViewModel=new ResultsViewModel(model,viewHandler);
+        resultsViewModel = new ResultsViewModel(model, viewHandler);
     }
 
     public GameViewModel getGameViewModel() {

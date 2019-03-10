@@ -1,8 +1,6 @@
 package client.view.results;
 
 import client.viewModel.results.ResultsViewModel;
-import javafx.beans.value.ObservableValue;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -15,7 +13,7 @@ public class ResultsView {
     @FXML
     TableColumn<String, Player> playerColumn;
     @FXML
-    TableColumn<Integer, Player> scoreColumn;
+    TableColumn<String, Player> scoreColumn;
     private ResultsViewModel resultsViewModel;
 
     public void init(ResultsViewModel resultsViewModel) {

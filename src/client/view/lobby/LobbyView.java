@@ -12,17 +12,21 @@ public class LobbyView {
     @FXML
     Button playButton;
     @FXML
-    TextField usernamefield;
+    TextField playerName;
     private LobbyViewModel lobbyViewModel;
 
     public void onPlayButton() {
-        lobbyViewModel.startGame();
+        if (playerName.getText().equals("") || playerName.getText() == null) {
+            playerName.setText("write a valid name");
+        } else {
+            lobbyViewModel.setPlayerName(playerName.getText());
+            lobbyViewModel.startGame();
+        }
     }
 
     public void init(LobbyViewModel lobbyViewModel) {
         this.lobbyViewModel = lobbyViewModel;
-        lobbyViewModel.usernameProperty().bindBidirectional(usernamefield.textProperty());
+//        lobbyViewModel.playerNameProperty().bindBidirectional(playerName.textProperty());
         lobbyViewModel.lobbyStatusLabelProperty().bindBidirectional(playerLabel.textProperty());
-
     }
 }

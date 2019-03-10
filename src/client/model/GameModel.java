@@ -2,19 +2,22 @@ package client.model;
 
 import client.networking.iClient;
 import shared.model.Game;
+import shared.model.Player;
 
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 
 public class GameModel implements Model {
-    private PropertyChangeSupport support = new PropertyChangeSupport(this);
+    private PropertyChangeSupport support;
     private iClient iClient;
     private Game game;
-
-
+    private Player player;
     private String lobbyStatus;
+    private Game.Sign mySign;
 
     public GameModel() {
+        player = new Player();
+        support = new PropertyChangeSupport(this);
     }
 
     @Override
@@ -43,15 +46,19 @@ public class GameModel implements Model {
     }
 
     @Override
-    public void updateBoard(Game game) {
-
-        support.firePropertyChange("Board update", null, game);
+    public void joinGame(Game.Sign sign) {
+        mySign = sign;
+        support.firePropertyChange("Join game", null, sign);
     }
 
     @Override
-    public void gameFinished() {
-
+    public Game.Sign getMySign() {
+        return mySign;
     }
 
+    @Override
+    public Player getPlayer() {
+        return player;
+    }
 
 }

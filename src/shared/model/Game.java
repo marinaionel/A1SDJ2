@@ -1,12 +1,10 @@
 package shared.model;
 
-import server.PlayerHandler;
-
 //This class is responsible for managing a game (validate inputs, notify players that the game started etc.)
 public class Game {
 
     public enum Sign {
-        EMPTY ,
+        EMPTY,
         CROSS,
         ZERO
     }
