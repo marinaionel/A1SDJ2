@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62805939-079e-4dd0-927d-535ffab00b3b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/A1SDJ2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/A1SDJ2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A1SDJ2/META-INF/A1SDJ2.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A1SDJ2/client/view/lobby/lobby.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A1SDJ2/client/view/lobby/lobby.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/GameModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/GameModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/viewModel/game/GameViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/viewModel/game/GameViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/PlayerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/PlayerHandler.java" afterDir="false" />
-    </list>
+    <list default="true" id="62805939-079e-4dd0-927d-535ffab00b3b" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,11 +63,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/server/PlayerHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="688">
-              <caret line="70" column="16" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="16" />
+            <state relative-caret-position="263">
+              <caret line="45" column="45" lean-forward="true" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2137#2138#0" expanded="true" />
+                <element signature="e#2097#2098#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -320,7 +310,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552172222464" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552172390281" />
     <property name="last_opened_file_path" value="C:/java1/javafx-sdk-11.0.2/lib" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -442,16 +432,15 @@
       <workItem from="1552056945523" duration="9211000" />
       <workItem from="1552122818509" duration="3930000" />
       <workItem from="1552138307472" duration="16520000" />
-      <workItem from="1552167142545" duration="4958000" />
+      <workItem from="1552167142545" duration="5269000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36026000" />
+    <option name="totallyTimeSpent" value="36337000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Learn" order="0" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.19148937" />
@@ -759,11 +748,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/server/PlayerHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="688">
-          <caret line="70" column="16" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="16" />
+        <state relative-caret-position="263">
+          <caret line="45" column="45" lean-forward="true" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2137#2138#0" expanded="true" />
+            <element signature="e#2097#2098#0" expanded="true" />
           </folding>
         </state>
       </provider>
