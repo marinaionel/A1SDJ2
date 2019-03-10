@@ -11,7 +11,7 @@ import java.beans.PropertyChangeEvent;
 public class LobbyViewModel {
     private Model model;
     private ViewHandler viewHandler;
-    private StringProperty username;
+    private StringProperty playerName;
     private StringProperty lobbyStatusLabel;
 
     public LobbyViewModel(Model model, ViewHandler viewHandler) {
@@ -19,8 +19,12 @@ public class LobbyViewModel {
         this.viewHandler = viewHandler;
 
         model.addListener("Lobby Status", this::lobbyStatusChanged);
-        username = new SimpleStringProperty();
         lobbyStatusLabel = new SimpleStringProperty();
+    }
+
+    public void setPlayerName(String playerName1) {
+        playerName = new SimpleStringProperty(playerName1);
+        model.getPlayer().setPlayerName(playerName1);
     }
 
     private void lobbyStatusChanged(PropertyChangeEvent event) {
@@ -31,11 +35,8 @@ public class LobbyViewModel {
         return lobbyStatusLabel;
     }
 
-    public StringProperty usernameProperty() {
-        return username;
+    public void startGame() {
+        model.getiClient().startGame(playerName.getValueSafe());
     }
 
-    public void startGame() {
-        model.getiClient().startGame("asd");
-    }
 }

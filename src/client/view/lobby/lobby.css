@@ -36,6 +36,6 @@
     -fx-border-color: cyan;
 }
 
-.text-field:focused{
+.text-field:focused {
     -fx-background-color: derive(darkblue, -20%);;
 }

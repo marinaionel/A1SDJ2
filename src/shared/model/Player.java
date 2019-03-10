@@ -1,12 +1,16 @@
 package shared.model;
 
 public class Player {
-    private String username;
+    private String playerName;
     private int score;
 
-    public Player(String username) {
-        this.username = username;
+    public Player() {
+        playerName = "";
         score = 0;
+    }
+
+    public void setPlayerName(String playerName) {
+        this.playerName = playerName;
     }
 
     public void incScore() {
@@ -17,7 +21,7 @@ public class Player {
         return score;
     }
 
-    public String getUsername() {
-        return username;
+    public String getPlayerName() {
+        return playerName;
     }
 }

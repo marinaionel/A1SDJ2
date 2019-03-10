@@ -20,6 +20,6 @@
 }
 
 .playbuttons:hover {
-    -fx-border-color: derive(cyan, -20%);
-    -fx-text-fill: derive(cyan, -20%);
+    -fx-border-color: derive(cyan, -40%);
+    -fx-text-fill: derive(cyan, -40%);
 }

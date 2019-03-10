@@ -1,7 +1,5 @@
 package server;
 
-import shared.model.Game;
-
 //This class is responsible for starting games
 public class GameCreator {
 

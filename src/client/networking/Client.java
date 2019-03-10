@@ -1,6 +1,7 @@
 package client.networking;
 
 import client.model.Model;
+import shared.model.Game;
 
 import java.io.IOException;
 import java.net.Socket;
@@ -30,12 +31,17 @@ public class Client implements iClient {
     }
 
     @Override
-    public void place(int row, int column) {
-
+    public void place(int row, int column, Game.Sign sign) {
+        socketHandler.place(row, column, sign);
     }
 
     @Override
     public void changeLabelStatus(String status) {
         model.setLobbyStatus(status);
+    }
+
+    @Override
+    public void joinGame(Game.Sign sign) {
+        model.joinGame(sign);
     }
 }

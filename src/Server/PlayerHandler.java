@@ -1,6 +1,7 @@
 package server;
 
 import shared.model.Game;
+import shared.model.Player;
 import shared.model.RequestCodes;
 
 import java.io.IOException;
@@ -15,7 +16,7 @@ public class PlayerHandler implements Runnable {
     private Game.Sign sign;
     ObjectInputStream socketIn = null;
     ObjectOutputStream socketOut = null;
-    private String playerName;
+    private Player player;
     private boolean tryPlayResult;
 
     public PlayerHandler(Socket socket) {
@@ -27,6 +28,7 @@ public class PlayerHandler implements Runnable {
         isInGame = true;
         try {
             socketOut.writeUTF(RequestCodes.JOINED_GAME + "|" + (sign == Game.Sign.ZERO ? "O" : "X"));
+            socketOut.flush();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -50,35 +52,36 @@ public class PlayerHandler implements Runnable {
             System.out.println(request);
 
             if (request.contains(RequestCodes.PLAY)) {
-                playerName = request.split("|")[1];
+                player = new Player();
+                player.setPlayerName(request.split("\\|")[1]); //when splitting the request message the last parameter is the player's name
                 tryPlayResult = GameCreator.tryPlay(this);
-                try {
-                    socketOut.writeUTF(tryPlayResult ? RequestCodes.OPPONENT_FOUND : RequestCodes.WAITING_FOR_OPPONENT);
-                    socketOut.flush();
-                } catch (IOException e) {
-                    e.printStackTrace();
+
+                //if we did not found an opponent we notify the client to wait until an opponent joins
+                if (!tryPlayResult) {
+                    try {
+                        socketOut.writeUTF(RequestCodes.WAITING_FOR_OPPONENT);
+                        socketOut.flush();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
 
 
-            if(request.contains(RequestCodes.TRY_PLACE))
-            {
+            if (request.contains(RequestCodes.TRY_PLACE)) {
 
             }
 
-            if(request.contains(RequestCodes.WIN))
-            {
+            if (request.contains(RequestCodes.WIN)) {
 
             }
-
-
 
 
         }
     }
 
     public String getPlayerName() {
-        return playerName;
+        return player.getPlayerName();
     }
 
 

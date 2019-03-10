@@ -2,6 +2,7 @@ package client.model;
 
 import client.networking.iClient;
 import shared.model.Game;
+import shared.model.Player;
 
 import java.beans.PropertyChangeListener;
 
@@ -14,8 +15,9 @@ public interface Model {
 
     iClient getiClient();
 
-    void updateBoard(Game game);
+    void joinGame(Game.Sign sign);
 
-    void gameFinished();
+    Game.Sign getMySign();
 
+    Player getPlayer();
 }
