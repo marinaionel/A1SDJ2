@@ -31,4 +31,8 @@ public class GameViewModel {
     public Game.Sign getMySign() {
         return model.getMySign();
     }
+
+    public String getPlayerName() {
+        return model.getPlayer().getPlayerName();
+    }
 }

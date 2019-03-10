@@ -74,5 +74,7 @@ public class GameView {
     public void init(GameViewModel gameViewModel) {
         this.gameViewModel = gameViewModel;
         playerType.setText(gameViewModel.getMySign() == Game.Sign.ZERO ? "O" : "X");
+        usernameLabel.setText(gameViewModel.getPlayerName());
+        winnerLabel.setText("");
     }
 }

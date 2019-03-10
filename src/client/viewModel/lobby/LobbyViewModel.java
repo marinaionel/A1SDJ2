@@ -35,10 +35,6 @@ public class LobbyViewModel {
         return lobbyStatusLabel;
     }
 
-    public StringProperty playerNameProperty() {
-        return playerName;
-    }
-
     public void startGame() {
         model.getiClient().startGame(playerName.getValueSafe());
     }
