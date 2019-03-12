@@ -43,11 +43,44 @@ public class GameManager {
             else
                 setPlayerTurn(Game.Sign.CROSS);
 
-            return RequestCodes.PLAYER_PLACED;
+
+
+            if(isWin() != Game.Sign.EMPTY)
+            return RequestCodes.WIN;
+            else
+                return RequestCodes.PLAYER_PLACED;
         }
         return RequestCodes.PLACE_TAKEN;
 
     }
+
+    public Game.Sign isWin()
+    {
+
+        for(int i=0; i < 3; i++)
+        {
+            if(game.getPlace(i, 0) == game.getPlace(i, 1) && game.getPlace(i,0)== game.getPlace(i,2))
+                return game.getPlace(i,0);
+
+        }
+
+        for(int i=0; i < 3; i++)
+        {
+            if(game.getPlace(0, i) == game.getPlace(1, i) && game.getPlace(0,i)== game.getPlace(2,i))
+                return game.getPlace(0,i);
+
+        }
+
+        if(game.getPlace(0,0) == game.getPlace(1,1) && game.getPlace(0,0) == game.getPlace(2,2))
+            return game.getPlace(0,0);
+
+        if(game.getPlace(0,2) == game.getPlace(1,1) && game.getPlace(0,2) == game.getPlace(2,0))
+            return game.getPlace(0,2);
+
+
+        return Game.Sign.EMPTY;
+    }
+
 
 
 

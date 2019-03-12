@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62805939-079e-4dd0-927d-535ffab00b3b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/client/networking/SocketHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/networking/SocketHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/model/RequestCodes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/model/RequestCodes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/GameManager.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/server/GameManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="746">
-              <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
+            <state relative-caret-position="769">
+              <caret line="48" column="12" lean-forward="true" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -64,7 +63,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server/PlayerHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="662">
@@ -188,9 +187,9 @@
         <option value="$PROJECT_DIR$/src/client/viewModel/lobby/LobbyViewModel.java" />
         <option value="$PROJECT_DIR$/src/shared/model/RequestCodes.java" />
         <option value="$PROJECT_DIR$/src/server/GameCreator.java" />
-        <option value="$PROJECT_DIR$/src/server/GameManager.java" />
         <option value="$PROJECT_DIR$/src/client/networking/SocketHandler.java" />
         <option value="$PROJECT_DIR$/src/server/PlayerHandler.java" />
+        <option value="$PROJECT_DIR$/src/server/GameManager.java" />
       </list>
     </option>
   </component>
@@ -313,7 +312,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552381666759" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552382839632" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -458,12 +457,12 @@
       <workItem from="1552208070569" duration="10134000" />
       <workItem from="1552238893348" duration="1313000" />
       <workItem from="1552302654449" duration="1825000" />
-      <workItem from="1552375945208" duration="5587000" />
+      <workItem from="1552375945208" duration="6759000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54885000" />
+    <option name="totallyTimeSpent" value="56057000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -741,16 +740,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/GameManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="746">
-          <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/shared/model/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -772,6 +761,16 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2434#2435#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/GameManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="769">
+          <caret line="48" column="12" lean-forward="true" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
