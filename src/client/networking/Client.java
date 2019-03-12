@@ -44,4 +44,9 @@ public class Client implements iClient {
     public void joinGame(Game.Sign sign) {
         model.joinGame(sign);
     }
+
+    public void setMessage(String message) {
+        model.setMessage(message);
+    }
+
 }

@@ -14,6 +14,7 @@ public class GameModel implements Model {
     private Player player;
     private String lobbyStatus;
     private Game.Sign mySign;
+    private String message;
 
     public GameModel() {
         player = new Player();
@@ -59,6 +60,16 @@ public class GameModel implements Model {
     @Override
     public Player getPlayer() {
         return player;
+    }
+
+    @Override
+    public String getMessage() {
+        return message;
+    }
+
+    @Override
+    public void setMessage(String message) {
+        this.message = message;
     }
 
 }

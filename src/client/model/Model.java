@@ -20,4 +20,8 @@ public interface Model {
     Game.Sign getMySign();
 
     Player getPlayer();
+
+    String getMessage();
+
+    void setMessage(String message);
 }

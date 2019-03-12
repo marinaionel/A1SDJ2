@@ -58,18 +58,9 @@ public class SocketHandler implements Runnable {
             do {
                 try {
                     request = inFromServer.readUTF();
+                    client.setMessage(request);
                 } catch (IOException e) {
                     e.printStackTrace();
-                }
-
-                //player tried to place, but it was in invalid move
-                if (request.equals(RequestCodes.PLAYER_PLACED)) {
-
-                }
-
-                //someone placed, the request has this form:    placed|column|row|sign
-                if (request.contains(RequestCodes.PLAYER_PLACED)) {
-
                 }
             } while (!request.equals(RequestCodes.GAME_FINISHED));
 

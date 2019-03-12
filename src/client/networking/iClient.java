@@ -10,4 +10,6 @@ public interface iClient {
     void changeLabelStatus(String status);
 
     void joinGame(Game.Sign sign);
+
+    void setMessage(String message);
 }

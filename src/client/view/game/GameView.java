@@ -9,6 +9,8 @@ import shared.model.Game;
 public class GameView {
     private GameViewModel gameViewModel;
     @FXML
+    Label errorLabel;
+    @FXML
     Label usernameLabel;
     @FXML
     Label turn;
@@ -37,38 +39,47 @@ public class GameView {
 
     public void placer1c1() {
         gameViewModel.place(1, 1);
+        gameViewModel.setErrorLabelStatus();
     }
 
     public void placer1c2() {
         gameViewModel.place(1, 2);
+        gameViewModel.setErrorLabelStatus();
     }
 
     public void placer1c3() {
         gameViewModel.place(1, 3);
+        gameViewModel.setErrorLabelStatus();
     }
 
     public void placer2c1() {
         gameViewModel.place(2, 1);
+        gameViewModel.setErrorLabelStatus();
     }
 
     public void placer2c2() {
         gameViewModel.place(2, 2);
+        gameViewModel.setErrorLabelStatus();
     }
 
     public void placer2c3() {
         gameViewModel.place(2, 3);
+        gameViewModel.setErrorLabelStatus();
     }
 
     public void placer3c1() {
         gameViewModel.place(3, 1);
+        gameViewModel.setErrorLabelStatus();
     }
 
     public void placer3c2() {
         gameViewModel.place(3, 2);
+        gameViewModel.setErrorLabelStatus();
     }
 
     public void placer3c3() {
         gameViewModel.place(3, 3);
+        gameViewModel.setErrorLabelStatus();
     }
 
     public void init(GameViewModel gameViewModel) {
@@ -76,5 +87,7 @@ public class GameView {
         playerType.setText(gameViewModel.getMySign() == Game.Sign.ZERO ? "O" : "X");
         usernameLabel.setText(gameViewModel.getPlayerName());
         winnerLabel.setText("");
+        errorLabel.setText("");
+        gameViewModel.errorLabelProperty().bind(errorLabel.textProperty());
     }
 }
