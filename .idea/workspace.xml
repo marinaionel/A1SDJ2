@@ -2,47 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62805939-079e-4dd0-927d-535ffab00b3b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/client/StartClient2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A1SDJ2/client/Start.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A1SDJ2/client/model/GameModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A1SDJ2/client/model/GameModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A1SDJ2/client/model/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A1SDJ2/client/model/Model.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A1SDJ2/client/networking/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A1SDJ2/client/networking/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A1SDJ2/client/networking/SocketHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A1SDJ2/client/networking/SocketHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A1SDJ2/client/networking/iClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A1SDJ2/client/networking/iClient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/A1SDJ2/client/view/game/GameView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A1SDJ2/client/view/game/GameView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A1SDJ2/client/view/game/game.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A1SDJ2/client/view/game/game.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A1SDJ2/client/view/lobby/lobby.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A1SDJ2/client/view/lobby/lobby.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A1SDJ2/client/view/results/ResultsView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A1SDJ2/client/view/results/ResultsView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A1SDJ2/client/viewModel/game/GameViewModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A1SDJ2/client/viewModel/game/GameViewModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A1SDJ2/client/viewModel/lobby/LobbyViewModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A1SDJ2/client/viewModel/lobby/LobbyViewModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A1SDJ2/server/GameManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A1SDJ2/server/GameManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A1SDJ2/server/PlayerHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A1SDJ2/server/PlayerHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A1SDJ2/shared/model/Game$Sign.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A1SDJ2/shared/model/Game$Sign.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A1SDJ2/shared/model/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A1SDJ2/shared/model/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A1SDJ2/shared/model/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A1SDJ2/shared/model/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/GameManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server/PlayerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/PlayerHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/StartClient1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/GameModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/GameModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/networking/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/networking/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/networking/SocketHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/networking/SocketHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/networking/iClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/networking/iClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/view/game/GameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/view/game/GameView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/view/game/game.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/view/game/game.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/view/game/game.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/view/game/game.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/view/lobby/LobbyView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/view/lobby/LobbyView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/view/lobby/lobby.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/view/lobby/lobby.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/view/lobby/lobby.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/view/lobby/lobby.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/view/results/ResultsView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/view/results/ResultsView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/view/results/results.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/view/results/results.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/viewModel/ViewModelProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/viewModel/ViewModelProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/viewModel/game/GameViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/viewModel/game/GameViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/viewModel/lobby/LobbyViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/viewModel/lobby/LobbyViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/model/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/model/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/model/RequestCodes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/model/RequestCodes.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,99 +14,73 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/client/model/GameModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1219">
-              <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
-              <folding>
-                <element signature="e#1286#1287#0" expanded="true" />
-                <element signature="e#1308#1309#0" expanded="true" />
-                <element signature="e#1467#1468#0" expanded="true" />
-                <element signature="e#1494#1495#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/client/networking/Client.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#694#695#0" expanded="true" />
-                <element signature="e#745#746#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/client/networking/iClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/server/PlayerHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="820">
-              <caret line="55" column="61" selection-start-line="55" selection-start-column="61" selection-end-line="55" selection-end-column="61" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/networking/SocketHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="80" column="21" lean-forward="true" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
+            <state relative-caret-position="303">
+              <caret line="71" selection-start-line="71" selection-end-line="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/view/ViewHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="38" selection-start-line="38" selection-end-line="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/model/GameModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/client/viewModel/lobby/LobbyViewModel.java">
+        <entry file="file://$PROJECT_DIR$/src/shared/model/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="828">
-              <caret line="42" column="62" selection-start-line="42" selection-start-column="62" selection-end-line="42" selection-end-column="62" />
+            <state relative-caret-position="272">
+              <caret line="16" column="53" lean-forward="true" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/shared/model/Player.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
               <folding>
-                <element signature="e#1045#1046#0" expanded="true" />
-                <element signature="e#1084#1085#0" expanded="true" />
-                <element signature="e#1134#1135#0" expanded="true" />
-                <element signature="e#1167#1168#0" expanded="true" />
-                <element signature="e#1249#1250#0" expanded="true" />
-                <element signature="e#1306#1307#0" expanded="true" />
+                <element signature="e#222#223#0" expanded="true" />
+                <element signature="e#266#267#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/client/view/game/GameView.java">
+        <entry file="file://$PROJECT_DIR$/src/client/StartClient1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="635">
-              <caret line="75" column="84" selection-start-line="75" selection-start-column="84" selection-end-line="75" selection-end-column="84" />
+            <state relative-caret-position="68">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/server/Server.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#657#658#0" expanded="true" />
-                <element signature="e#698#699#0" expanded="true" />
-                <element signature="e#729#730#0" expanded="true" />
-                <element signature="e#770#771#0" expanded="true" />
-                <element signature="e#873#874#0" expanded="true" />
-                <element signature="e#914#915#0" expanded="true" />
-                <element signature="e#945#946#0" expanded="true" />
-                <element signature="e#986#987#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -154,17 +89,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/shared/model/RequestCodes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
+            <state relative-caret-position="170">
               <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/server/GameCreator.java">
+        <entry file="file://$PROJECT_DIR$/src/client/view/lobby/LobbyView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" column="29" lean-forward="true" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+            <state relative-caret-position="136">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/view/game/GameView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="779">
+              <caret line="79" column="1" selection-start-line="79" selection-start-column="1" selection-end-line="79" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -240,9 +190,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="950" />
-    <option name="width" value="979" />
-    <option name="height" value="1040" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1296" />
+    <option name="height" value="696" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -252,7 +203,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -305,14 +256,6 @@
               <item name="A1SDJ2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="lobby" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="A1SDJ2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="A1SDJ2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="viewModel" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -359,15 +302,15 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552218382254" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552378149807" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SDJ2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -395,7 +338,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.StartClient1">
     <configuration name="GameApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="client.GameApplication" />
       <module name="A1SDJ2" />
@@ -435,7 +378,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StartClient1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Start" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="client.Start" />
+      <module name="A1SDJ2" />
+      <option name="VM_PARAMETERS" value="--module-path C:/java1/javafx-sdk-11.0.2/lib --add-modules=javafx.controls,javafx.fxml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StartClient1" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="client.StartClient1" />
       <module name="A1SDJ2" />
       <extension name="coverage">
@@ -461,21 +418,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Start" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="client.Start" />
-      <module name="A1SDJ2" />
-      <option name="VM_PARAMETERS" value="--module-path C:/java1/javafx-sdk-11.0.2/lib --add-modules=javafx.controls,javafx.fxml" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
+      <item itemvalue="Application.Start" />
       <item itemvalue="Application.StartClient1" />
       <item itemvalue="Application.Server" />
       <item itemvalue="Application.GameApplication" />
@@ -483,9 +427,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.StartClient2" />
         <item itemvalue="Application.StartClient1" />
         <item itemvalue="Application.Server" />
+        <item itemvalue="Application.StartClient2" />
         <item itemvalue="Application.GameApplication" />
         <item itemvalue="Application.StartClient1" />
       </list>
@@ -507,17 +451,20 @@
       <workItem from="1552138307472" duration="16520000" />
       <workItem from="1552167142545" duration="4958000" />
       <workItem from="1552208070569" duration="10134000" />
+      <workItem from="1552238893348" duration="1313000" />
+      <workItem from="1552302654449" duration="1825000" />
+      <workItem from="1552375945208" duration="2073000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46160000" />
+    <option name="totallyTimeSpent" value="51371000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Learn" order="0" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.19395973" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.19893616" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="3" />
       <window_info id="Image Layers" order="4" />
@@ -526,7 +473,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3243626" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32362458" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -537,7 +484,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.3286119" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.32719547" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32686085" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -613,33 +560,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/GameApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/view/game/game.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="59">
           <caret line="136" column="21" lean-forward="true" selection-start-line="136" selection-start-column="21" selection-end-line="136" selection-end-column="21" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/view/game/game.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -648,23 +575,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/StartClient1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/StartClient2.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$USER_HOME$/Documents/openjfx-11.0.2_windows-x64_bin-sdk/javafx-sdk-11.0.2/lib/src.zip!/javafx.graphics/com/sun/glass/ui/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="440" selection-start-line="440" selection-end-line="440" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$USER_HOME$/Documents/openjfx-11.0.2_windows-x64_bin-sdk/javafx-sdk-11.0.2/lib/src.zip!/javafx.graphics/com/sun/glass/ui/Application.java" />
     <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -673,30 +584,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/view/lobby/lobby.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
           <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/view/ViewHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/view/lobby/LobbyView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="38" lean-forward="true" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -706,24 +597,6 @@
           <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/view/game/GameView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="635">
-          <caret line="75" column="84" selection-start-line="75" selection-start-column="84" selection-end-line="75" selection-end-column="84" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#657#658#0" expanded="true" />
-            <element signature="e#698#699#0" expanded="true" />
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#770#771#0" expanded="true" />
-            <element signature="e#873#874#0" expanded="true" />
-            <element signature="e#914#915#0" expanded="true" />
-            <element signature="e#945#946#0" expanded="true" />
-            <element signature="e#986#987#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -750,70 +623,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/networking/iClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/shared/model/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="53" lean-forward="true" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/shared/model/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <element signature="e#222#223#0" expanded="true" />
-            <element signature="e#266#267#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/GameCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="29" lean-forward="true" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/shared/model/RequestCodes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+        <state relative-caret-position="136">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/server/PlayerHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="820">
-          <caret line="55" column="61" selection-start-line="55" selection-start-column="61" selection-end-line="55" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/model/GameModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1219">
-          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
-          <folding>
-            <element signature="e#1286#1287#0" expanded="true" />
-            <element signature="e#1308#1309#0" expanded="true" />
-            <element signature="e#1467#1468#0" expanded="true" />
-            <element signature="e#1494#1495#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/networking/SocketHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="80" column="21" lean-forward="true" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
+        <state relative-caret-position="884">
+          <caret line="58" column="61" selection-start-line="58" selection-start-column="61" selection-end-line="58" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -822,28 +640,128 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/networking/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+        <state relative-caret-position="408">
+          <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#694#695#0" expanded="true" />
-            <element signature="e#745#746#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/viewModel/lobby/LobbyViewModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="42" column="62" selection-start-line="42" selection-start-column="62" selection-end-line="42" selection-end-column="62" />
+        <state relative-caret-position="544">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/GameApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding>
-            <element signature="e#1045#1046#0" expanded="true" />
-            <element signature="e#1084#1085#0" expanded="true" />
-            <element signature="e#1134#1135#0" expanded="true" />
-            <element signature="e#1167#1168#0" expanded="true" />
-            <element signature="e#1249#1250#0" expanded="true" />
-            <element signature="e#1306#1307#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/StartClient2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/GameCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/networking/SocketHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/StartClient1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/shared/model/RequestCodes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/view/lobby/LobbyView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/view/game/GameView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="79" column="1" selection-start-line="79" selection-start-column="1" selection-end-line="79" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/view/ViewHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/model/GameModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/shared/model/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#222#223#0" expanded="true" />
+            <element signature="e#266#267#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/shared/model/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="53" lean-forward="true" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
         </state>
       </provider>
     </entry>
