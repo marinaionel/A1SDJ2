@@ -14,10 +14,11 @@ public class PlayerHandler implements Runnable {
     private Socket socket;
     private boolean isInGame;
     private Game.Sign sign;
-    ObjectInputStream socketIn = null;
-    ObjectOutputStream socketOut = null;
+    private ObjectInputStream socketIn = null;
+    private ObjectOutputStream socketOut = null;
     private Player player;
     private boolean tryPlayResult;
+    private GameManager gameManager;
 
     public PlayerHandler(Socket socket) {
         this.socket = socket;
@@ -66,15 +67,12 @@ public class PlayerHandler implements Runnable {
                     }
                 }
             }
-            do{
-
-            if (request.contains(RequestCodes.TRY_PLACE)) {
-
-            }
-
-            if (request.contains(RequestCodes.WIN)) {
-
-            }}while (true);
+            do {
+                if (request.contains(RequestCodes.TRY_PLACE)) {
+                    String[] array = request.split("\\|");
+                    gameManager.checkIfPlacePossible(Integer.parseInt(array[1]), Integer.parseInt(array[2]), (array[3].equals("X") ? Game.Sign.CROSS : Game.Sign.ZERO));
+                }
+            } while (gameManager);
 
 
         }
@@ -84,14 +82,14 @@ public class PlayerHandler implements Runnable {
         return player.getPlayerName();
     }
 
-//    public int placeResult(int row, int column)
-//    {
-//        socketOut.writeUTF(RequestCodes.);
-//
-//
-//
-//
-//        return 0;
-//    }
+
+    public void send(String message) {
+        try {
+            socketOut.writeUTF(message);
+            socketOut.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 }
