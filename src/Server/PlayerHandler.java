@@ -66,7 +66,7 @@ public class PlayerHandler implements Runnable {
                     }
                 }
             }
-
+            do{
 
             if (request.contains(RequestCodes.TRY_PLACE)) {
 
@@ -74,7 +74,7 @@ public class PlayerHandler implements Runnable {
 
             if (request.contains(RequestCodes.WIN)) {
 
-            }
+            }}while (true);
 
 
         }
@@ -84,5 +84,14 @@ public class PlayerHandler implements Runnable {
         return player.getPlayerName();
     }
 
+//    public int placeResult(int row, int column)
+//    {
+//        socketOut.writeUTF(RequestCodes.);
+//
+//
+//
+//
+//        return 0;
+//    }
 
 }

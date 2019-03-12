@@ -63,7 +63,7 @@ public class SocketHandler implements Runnable {
                 }
 
                 //player tried to place, but it was in invalid move
-                if (request.equals(RequestCodes.CANT_PLACE)) {
+                if (request.equals(RequestCodes.PLAYER_PLACED)) {
 
                 }
 
