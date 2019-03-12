@@ -45,8 +45,15 @@ public class Client implements iClient {
         model.joinGame(sign);
     }
 
-    public void setMessage(String message) {
-        model.setMessage(message);
+    @Override
+    public void cantPlace(String reason) {
+        model.cantPlace(reason);
     }
+
+    @Override
+    public void validPlace(int row, int column, Game.Sign sign) {
+        model.validPlace(row, column, sign);
+    }
+
 
 }

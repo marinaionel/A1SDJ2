@@ -50,6 +50,7 @@ public class GameModel implements Model {
     public void joinGame(Game.Sign sign) {
         mySign = sign;
         support.firePropertyChange("Join game", null, sign);
+        game = new Game();
     }
 
     @Override
@@ -63,13 +64,13 @@ public class GameModel implements Model {
     }
 
     @Override
-    public String getMessage() {
-        return message;
+    public void cantPlace(String reason) {
+        support.firePropertyChange("can't place", null, reason);
     }
 
     @Override
-    public void setMessage(String message) {
-        this.message = message;
+    public void validPlace(int row, int column, Game.Sign sign) {
+        game.place(row, column, sign);
+        support.firePropertyChange("placed", null, game);
     }
-
 }

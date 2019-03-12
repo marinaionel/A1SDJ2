@@ -21,7 +21,7 @@ public interface Model {
 
     Player getPlayer();
 
-    String getMessage();
+    void cantPlace(String reason);
 
-    void setMessage(String message);
+    void validPlace(int row, int column, Game.Sign sign);
 }

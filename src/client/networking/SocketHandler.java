@@ -58,7 +58,19 @@ public class SocketHandler implements Runnable {
             do {
                 try {
                     request = inFromServer.readUTF();
-                    client.setMessage(request);
+                    System.out.println(request);
+
+                    //1. place taken or not your turn -> update label from view
+                    if (request.contains(RequestCodes.PLACE_TAKEN))
+                        client.cantPlace(RequestCodes.PLACE_TAKEN);
+                    if (request.contains(RequestCodes.NOT_YOUR_TURN))
+                        client.cantPlace(RequestCodes.NOT_YOUR_TURN);
+                    //2. player placed
+                    if (request.contains(RequestCodes.PLAYER_PLACED)) {
+                        String[] arr = request.split("\\|");
+                        client.validPlace(Integer.parseInt(arr[1]), Integer.parseInt(arr[2]), (arr[3].equals("X") ? Game.Sign.CROSS : Game.Sign.ZERO));
+                    }
+
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -82,7 +94,6 @@ public class SocketHandler implements Runnable {
         try {
             outToServer.writeUTF(RequestCodes.TRY_PLACE + "|" + row + "|" + column + "|" + (sign == Game.Sign.ZERO ? "O" : "X"));
             outToServer.flush();
-            System.out.println(1);
         } catch (IOException e) {
             e.printStackTrace();
         }

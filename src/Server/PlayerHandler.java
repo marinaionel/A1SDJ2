@@ -24,8 +24,9 @@ public class PlayerHandler implements Runnable {
         this.socket = socket;
     }
 
-    public void joinGame(Game.Sign sign) {
+    public void joinGame(Game.Sign sign, GameManager gameManager) {
         this.sign = sign;
+        this.gameManager = gameManager;
         isInGame = true;
         try {
             socketOut.writeUTF(RequestCodes.JOINED_GAME + "|" + (sign == Game.Sign.ZERO ? "O" : "X"));
@@ -68,11 +69,19 @@ public class PlayerHandler implements Runnable {
                 }
             }
             do {
+                try {
+                    request = socketIn.readUTF();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                System.out.println(request);
                 if (request.contains(RequestCodes.TRY_PLACE)) {
                     String[] array = request.split("\\|");
-                    gameManager.checkIfPlacePossible(Integer.parseInt(array[1]), Integer.parseInt(array[2]), (array[3].equals("X") ? Game.Sign.CROSS : Game.Sign.ZERO));
+                    gameManager.tryPlace(Integer.parseInt(array[1]), Integer.parseInt(array[2]), (array[3].equals("X") ? Game.Sign.CROSS : Game.Sign.ZERO));
                 }
             } while (!gameManager.isWin());
+
+
         }
     }
 

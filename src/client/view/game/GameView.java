@@ -39,47 +39,38 @@ public class GameView {
 
     public void placer1c1() {
         gameViewModel.place(1, 1);
-        gameViewModel.setErrorLabelStatus();
     }
 
     public void placer1c2() {
         gameViewModel.place(1, 2);
-        gameViewModel.setErrorLabelStatus();
     }
 
     public void placer1c3() {
         gameViewModel.place(1, 3);
-        gameViewModel.setErrorLabelStatus();
     }
 
     public void placer2c1() {
         gameViewModel.place(2, 1);
-        gameViewModel.setErrorLabelStatus();
     }
 
     public void placer2c2() {
         gameViewModel.place(2, 2);
-        gameViewModel.setErrorLabelStatus();
     }
 
     public void placer2c3() {
         gameViewModel.place(2, 3);
-        gameViewModel.setErrorLabelStatus();
     }
 
     public void placer3c1() {
         gameViewModel.place(3, 1);
-        gameViewModel.setErrorLabelStatus();
     }
 
     public void placer3c2() {
         gameViewModel.place(3, 2);
-        gameViewModel.setErrorLabelStatus();
     }
 
     public void placer3c3() {
         gameViewModel.place(3, 3);
-        gameViewModel.setErrorLabelStatus();
     }
 
     public void init(GameViewModel gameViewModel) {
@@ -88,6 +79,15 @@ public class GameView {
         usernameLabel.setText(gameViewModel.getPlayerName());
         winnerLabel.setText("");
         errorLabel.setText("");
-        gameViewModel.errorLabelProperty().bind(errorLabel.textProperty());
+        errorLabel.textProperty().bindBidirectional(gameViewModel.errorLabelProperty());
+        r1c1.textProperty().bindBidirectional(gameViewModel.r1c1Property());
+        r1c2.textProperty().bindBidirectional(gameViewModel.r1c2Property());
+        r1c3.textProperty().bindBidirectional(gameViewModel.r1c3Property());
+        r2c1.textProperty().bindBidirectional(gameViewModel.r2c1Property());
+        r2c2.textProperty().bindBidirectional(gameViewModel.r2c2Property());
+        r2c3.textProperty().bindBidirectional(gameViewModel.r2c3Property());
+        r3c1.textProperty().bindBidirectional(gameViewModel.r3c1Property());
+        r3c2.textProperty().bindBidirectional(gameViewModel.r3c2Property());
+        r3c3.textProperty().bindBidirectional(gameViewModel.r3c3Property());
     }
 }

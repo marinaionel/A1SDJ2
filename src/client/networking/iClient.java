@@ -11,5 +11,7 @@ public interface iClient {
 
     void joinGame(Game.Sign sign);
 
-    void setMessage(String message);
+    void cantPlace(String reason);
+
+    void validPlace(int row, int column, Game.Sign sign);
 }
