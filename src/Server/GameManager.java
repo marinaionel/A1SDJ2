@@ -4,14 +4,10 @@ import shared.model.Game;
 import shared.model.RequestCodes;
 
 public class GameManager {
-
-
     private PlayerHandler player1;
     private PlayerHandler player2;
     private Game game;
-
     private Game.Sign turn; //indicates who's turn is it now;
-
 
     public GameManager(PlayerHandler player1, PlayerHandler player2) {
         game = new Game();
@@ -25,15 +21,20 @@ public class GameManager {
         }
     }
 
-    public String checkIfPlacePossible(int row, int column, Game.Sign sign) {
+    public void checkIfPlacePossible(int row, int column, Game.Sign sign) {
         if (turn != sign) {
-            return RequestCodes.NOT_YOUR_TURN;
+            if (sign == Game.Sign.CROSS)
+                player1.send(RequestCodes.NOT_YOUR_TURN);
+            else
+                player2.send(RequestCodes.NOT_YOUR_TURN);
         }
         if (game.getPlace(row, column) == Game.Sign.EMPTY) {
             place(row, column, sign);
-            isWin();
-        }
-        return RequestCodes.PLACE_TAKEN;
+        } else if (sign == Game.Sign.CROSS)
+            player1.send(RequestCodes.NOT_YOUR_TURN);
+        else
+            player2.send(RequestCodes.NOT_YOUR_TURN);
+
     }
 
     public void place(int row, int column, Game.Sign sign) {

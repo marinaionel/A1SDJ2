@@ -73,8 +73,6 @@ public class PlayerHandler implements Runnable {
                     gameManager.checkIfPlacePossible(Integer.parseInt(array[1]), Integer.parseInt(array[2]), (array[3].equals("X") ? Game.Sign.CROSS : Game.Sign.ZERO));
                 }
             } while (!gameManager.isWin());
-
-
         }
     }
 
