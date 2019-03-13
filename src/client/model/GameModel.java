@@ -78,6 +78,6 @@ public class GameModel implements Model {
 
     @Override
     public void draw() {
-        support.firePropertyChange("draw", null, "draw");
+        support.firePropertyChange("draw", null, "It's a draw! Game over!");
     }
 }

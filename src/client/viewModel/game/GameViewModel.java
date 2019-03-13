@@ -13,6 +13,7 @@ public class GameViewModel {
     private Model model;
     private ViewHandler viewHandler;
     private StringProperty errorLabel;
+    private StringProperty winnerStatusLabel;
 
     private StringProperty r1c1;
     private StringProperty r1c2;
@@ -31,6 +32,8 @@ public class GameViewModel {
         model.addListener("Join game", this::joinGame);
         model.addListener("can't place", this::setErrorLabelStatus);
         model.addListener("placed", this::validPlacing);
+        model.addListener("GameFinished", this::checkFinishedGame);
+        model.addListener("draw", this::checkDraw);
         r1c1 = new SimpleStringProperty();
         r1c2 = new SimpleStringProperty();
         r1c3 = new SimpleStringProperty();
@@ -40,7 +43,18 @@ public class GameViewModel {
         r3c1 = new SimpleStringProperty();
         r3c2 = new SimpleStringProperty();
         r3c3 = new SimpleStringProperty();
+        winnerStatusLabel = new SimpleStringProperty();
+    }
 
+    private void checkDraw(PropertyChangeEvent event) {
+        Platform.runLater(() -> winnerStatusLabel.setValue((String) event.getNewValue()));
+    }
+
+    private void checkFinishedGame(PropertyChangeEvent event) {
+        Platform.runLater(() -> {
+            String[] arr = ((String) event.getNewValue()).split("\\|");
+            winnerStatusLabel.setValue("The winner is " + arr[0] + ", sign: " + arr[1]);
+        });
     }
 
     public StringProperty r1c1Property() {
@@ -92,8 +106,6 @@ public class GameViewModel {
             r3c2.setValue(signToString(game.getPlace(2, 1)));
             r3c3.setValue(signToString(game.getPlace(2, 2)));
         });
-        System.out.println(signToString(game.getPlace(0, 0)) + "::r1c1");
-        System.out.println(signToString(game.getPlace(0, 1)) + "::r1c2");
     }
 
     private String signToString(Game.Sign sign) {
@@ -116,6 +128,10 @@ public class GameViewModel {
 
     public Game.Sign getMySign() {
         return model.getMySign();
+    }
+
+    public StringProperty winnerStatusLabelProperty() {
+        return winnerStatusLabel;
     }
 
     public StringProperty errorLabelProperty() {

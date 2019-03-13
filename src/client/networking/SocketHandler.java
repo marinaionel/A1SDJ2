@@ -80,7 +80,7 @@ public class SocketHandler implements Runnable {
             }
 
             if (request.equals(RequestCodes.FULL_BOARD)) {
-                client.draw(request);
+                client.draw();
             }
 
         }

@@ -89,5 +89,6 @@ public class GameView {
         r3c1.textProperty().bindBidirectional(gameViewModel.r3c1Property());
         r3c2.textProperty().bindBidirectional(gameViewModel.r3c2Property());
         r3c3.textProperty().bindBidirectional(gameViewModel.r3c3Property());
+        winnerLabel.textProperty().bindBidirectional(gameViewModel.winnerStatusLabelProperty());
     }
 }
