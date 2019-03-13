@@ -49,6 +49,10 @@ public class GameManager {
             if (game.getPlace(i, 0) == game.getPlace(i, 1) && game.getPlace(i, 0) == game.getPlace(i, 2) && game.getPlace(i, 0) != Game.Sign.EMPTY) {
                 player1.send(RequestCodes.WIN + "|" + (game.getPlace(i, 0) == Game.Sign.ZERO ? "O" : "X"));
                 player2.send(RequestCodes.WIN + "|" + (game.getPlace(i, 0) == Game.Sign.ZERO ? "O" : "X"));
+                if(game.getPlace(i, 0) ==Game.Sign.CROSS)
+                    player1.incPlayerScore();
+                else
+                    player2.incPlayerScore();
                 return true;
             }
 
@@ -58,6 +62,10 @@ public class GameManager {
             if (game.getPlace(0, i) == game.getPlace(1, i) && game.getPlace(0, i) == game.getPlace(2, i) && game.getPlace(0, i) != Game.Sign.EMPTY) {
                 player1.send(RequestCodes.WIN + "|" + (game.getPlace(0, i) == Game.Sign.ZERO ? "O" : "X"));
                 player2.send(RequestCodes.WIN + "|" + (game.getPlace(0, i) == Game.Sign.ZERO ? "O" : "X"));
+                if(game.getPlace(0, i) ==Game.Sign.CROSS)
+                    player1.incPlayerScore();
+                else
+                    player2.incPlayerScore();
                 return true;
             }
 
@@ -66,16 +74,21 @@ public class GameManager {
         if (game.getPlace(0, 0) == game.getPlace(1, 1) && game.getPlace(0, 0) == game.getPlace(2, 2) && game.getPlace(2, 2) != Game.Sign.EMPTY) {
             player1.send(RequestCodes.WIN + "|" + (game.getPlace(0, 0) == Game.Sign.ZERO ? "O" : "X"));
             player2.send(RequestCodes.WIN + "|" + (game.getPlace(0, 0) == Game.Sign.ZERO ? "O" : "X"));
+            if(game.getPlace(0, 0) ==Game.Sign.CROSS)
+                player1.incPlayerScore();
+            else
+                player2.incPlayerScore();
             return true;
         }
-
         if (game.getPlace(0, 2) == game.getPlace(1, 1) && game.getPlace(0, 2) == game.getPlace(2, 0) && game.getPlace(2, 0) != Game.Sign.EMPTY) {
             player1.send(RequestCodes.WIN + "|" + (game.getPlace(0, 2) == Game.Sign.ZERO ? "O" : "X"));
             player1.send(RequestCodes.WIN + "|" + (game.getPlace(0, 2) == Game.Sign.ZERO ? "O" : "X"));
+            if(game.getPlace(0, 2) ==Game.Sign.CROSS)
+                player1.incPlayerScore();
+            else
+                player2.incPlayerScore();
             return true;
         }
-
-
         return false;
     }
 

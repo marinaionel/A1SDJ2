@@ -84,6 +84,13 @@ public class GameViewModel {
         Platform.runLater(() -> {
             r1c1.setValue(signToString(game.getPlace(0, 0)));
             r1c2.setValue(signToString(game.getPlace(0, 1)));
+            r1c3.setValue(signToString(game.getPlace(0, 2)));
+            r2c1.setValue(signToString(game.getPlace(1, 0)));
+            r2c2.setValue(signToString(game.getPlace(1, 1)));
+            r2c3.setValue(signToString(game.getPlace(1, 2)));
+            r3c1.setValue(signToString(game.getPlace(2, 0)));
+            r3c2.setValue(signToString(game.getPlace(2, 1)));
+            r3c3.setValue(signToString(game.getPlace(2, 2)));
         });
         System.out.println(signToString(game.getPlace(0, 0)) + "::r1c1");
         System.out.println(signToString(game.getPlace(0, 1)) + "::r1c2");

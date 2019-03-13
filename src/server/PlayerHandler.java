@@ -22,6 +22,8 @@ public class PlayerHandler implements Runnable {
 
     public PlayerHandler(Socket socket) {
         this.socket = socket;
+        player = new Player();
+        PlayerList.addPlayer(player);
     }
 
     public void joinGame(Game.Sign sign, GameManager gameManager) {
@@ -54,7 +56,6 @@ public class PlayerHandler implements Runnable {
             System.out.println(request);
 
             if (request.contains(RequestCodes.PLAY)) {
-                player = new Player();
                 player.setPlayerName(request.split("\\|")[1]); //when splitting the request message the last parameter is the player's name
                 tryPlayResult = GameCreator.tryPlay(this);
 
@@ -68,25 +69,33 @@ public class PlayerHandler implements Runnable {
                     }
                 }
             }
-            do {
-                try {
-                    request = socketIn.readUTF();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                System.out.println(request);
-                if (request.contains(RequestCodes.TRY_PLACE)) {
-                    String[] array = request.split("\\|");
-                    gameManager.tryPlace(Integer.parseInt(array[1]), Integer.parseInt(array[2]), (array[3].equals("X") ? Game.Sign.CROSS : Game.Sign.ZERO));
-                }
-            } while (!gameManager.isWin());
 
+            if (isInGame)
+                do {
+                    try {
+                        request = socketIn.readUTF();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    System.out.println(request);
+                    if (request.contains(RequestCodes.TRY_PLACE)) {
+                        String[] array = request.split("\\|");
+                        gameManager.tryPlace(Integer.parseInt(array[1]), Integer.parseInt(array[2]), (array[3].equals("X") ? Game.Sign.CROSS : Game.Sign.ZERO));
+                    }
+                } while (!gameManager.isWin());
+
+            isInGame = false;
+            gameManager = null;
 
         }
     }
 
     public String getPlayerName() {
         return player.getPlayerName();
+    }
+
+    public void incPlayerScore(){
+        player.incScore();
     }
 
 
