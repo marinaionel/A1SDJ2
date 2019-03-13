@@ -1,6 +1,6 @@
 package client;
 
-import gameApplication.GameApplication;
+import client.gameApplication.GameApplication;
 import javafx.application.Application;
 
 public class Start {
