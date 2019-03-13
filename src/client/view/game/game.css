@@ -9,6 +9,14 @@
 }
 
 .playbuttons {
+    -fx-font-size: 6em;
+}
+
+.lower-buttons {
+    -fx-font-size: 1.5em;
+}
+
+.playbuttons, .lower-buttons {
     -fx-font-family: "Eras Medium ITC";
     -fx-text-alignment: center;
     -fx-border-width: 2px;
@@ -19,7 +27,7 @@
     -fx-background-color: transparent;
 }
 
-.playbuttons:hover {
+.playbuttons:hover, .lower-buttons:hover {
     -fx-border-color: derive(cyan, -40%);
     -fx-text-fill: derive(cyan, -40%);
 }
