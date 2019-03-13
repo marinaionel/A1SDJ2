@@ -1,4 +1,4 @@
-package client;
+package gameApplication;
 
 import client.model.GameModel;
 import client.model.Model;

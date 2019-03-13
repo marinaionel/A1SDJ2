@@ -32,7 +32,7 @@
         </HBox>
         <HBox style="-fx-alignment: center;">
             <VBox.margin>
-                <Insets bottom="5.0" />
+                <Insets bottom="10.0" />
             </VBox.margin>
             <children>
                 <Label styleClass="label-normal" text="You are player ">
@@ -42,6 +42,9 @@
                     <font>
                         <Font size="16.0" />
                     </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
                 </Label>
                 <Label fx:id="playerType" styleClass="label-normal" text="X">
                     <effect>
@@ -53,14 +56,6 @@
                 </Label>
             </children>
         </HBox>
-        <Label fx:id="turn" styleClass="label-normal" text="turn" textFill="RED">
-            <VBox.margin>
-                <Insets bottom="10.0" />
-            </VBox.margin>
-            <font>
-                <Font name="System Bold" size="15.0" />
-            </font>
-        </Label>
         <HBox style="-fx-alignment: center;">
             <children>
                 <Button fx:id="r1c1" maxHeight="130.0" mnemonicParsing="false" onAction="#placer1c1" prefHeight="130.0" prefWidth="130.0" styleClass="playbuttons" textFill="RED">
@@ -149,6 +144,9 @@
          <VBox.margin>
             <Insets top="5.0" />
          </VBox.margin>
+         <effect>
+            <Glow />
+         </effect>
       </Label>
         <HBox prefHeight="52.0" prefWidth="599.0" style="-fx-alignment: center;">
             <children>
