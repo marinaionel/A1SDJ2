@@ -74,7 +74,7 @@ public class SocketHandler implements Runnable {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-            } while (!request.equals(RequestCodes.GAME_FINISHED));
+            } while (!request.equals(RequestCodes.GAME_FINISHED) && !request.equals(RequestCodes.FULL_BOARD));
 
 
         }

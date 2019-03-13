@@ -72,6 +72,15 @@ public class PlayerHandler implements Runnable {
 
             if (isInGame)
                 do {
+                    if (!gameManager.isWin() && gameManager.isFull()) {
+                        try {
+                            socketOut.writeUTF(RequestCodes.FULL_BOARD);
+                            socketOut.flush();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                        break;
+                    }
                     try {
                         request = socketIn.readUTF();
                     } catch (IOException e) {
@@ -94,7 +103,7 @@ public class PlayerHandler implements Runnable {
         return player.getPlayerName();
     }
 
-    public void incPlayerScore(){
+    public void incPlayerScore() {
         player.incScore();
     }
 

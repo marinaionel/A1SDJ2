@@ -47,50 +47,47 @@ public class GameManager {
 
         for (int i = 0; i < 3; i++) {
             if (game.getPlace(i, 0) == game.getPlace(i, 1) && game.getPlace(i, 0) == game.getPlace(i, 2) && game.getPlace(i, 0) != Game.Sign.EMPTY) {
-                player1.send(RequestCodes.WIN + "|" + (game.getPlace(i, 0) == Game.Sign.ZERO ? "O" : "X"));
-                player2.send(RequestCodes.WIN + "|" + (game.getPlace(i, 0) == Game.Sign.ZERO ? "O" : "X"));
-                if(game.getPlace(i, 0) ==Game.Sign.CROSS)
-                    player1.incPlayerScore();
-                else
-                    player2.incPlayerScore();
+                sendWinMessage(i, 0);
                 return true;
             }
-
         }
 
         for (int i = 0; i < 3; i++) {
             if (game.getPlace(0, i) == game.getPlace(1, i) && game.getPlace(0, i) == game.getPlace(2, i) && game.getPlace(0, i) != Game.Sign.EMPTY) {
-                player1.send(RequestCodes.WIN + "|" + (game.getPlace(0, i) == Game.Sign.ZERO ? "O" : "X"));
-                player2.send(RequestCodes.WIN + "|" + (game.getPlace(0, i) == Game.Sign.ZERO ? "O" : "X"));
-                if(game.getPlace(0, i) ==Game.Sign.CROSS)
-                    player1.incPlayerScore();
-                else
-                    player2.incPlayerScore();
+                sendWinMessage(0, i);
                 return true;
             }
-
         }
 
         if (game.getPlace(0, 0) == game.getPlace(1, 1) && game.getPlace(0, 0) == game.getPlace(2, 2) && game.getPlace(2, 2) != Game.Sign.EMPTY) {
-            player1.send(RequestCodes.WIN + "|" + (game.getPlace(0, 0) == Game.Sign.ZERO ? "O" : "X"));
-            player2.send(RequestCodes.WIN + "|" + (game.getPlace(0, 0) == Game.Sign.ZERO ? "O" : "X"));
-            if(game.getPlace(0, 0) ==Game.Sign.CROSS)
-                player1.incPlayerScore();
-            else
-                player2.incPlayerScore();
+            sendWinMessage(0, 0);
             return true;
         }
         if (game.getPlace(0, 2) == game.getPlace(1, 1) && game.getPlace(0, 2) == game.getPlace(2, 0) && game.getPlace(2, 0) != Game.Sign.EMPTY) {
-            player1.send(RequestCodes.WIN + "|" + (game.getPlace(0, 2) == Game.Sign.ZERO ? "O" : "X"));
-            player1.send(RequestCodes.WIN + "|" + (game.getPlace(0, 2) == Game.Sign.ZERO ? "O" : "X"));
-            if(game.getPlace(0, 2) ==Game.Sign.CROSS)
-                player1.incPlayerScore();
-            else
-                player2.incPlayerScore();
+            sendWinMessage(0, 2);
             return true;
         }
         return false;
     }
 
+    public boolean isFull() {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (game.getPlace(i, j) == Game.Sign.EMPTY) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
 
+    private void sendWinMessage(int row, int column) {
+        player1.send(RequestCodes.WIN + "|" + (game.getPlace(row, column) == Game.Sign.ZERO ? "O" : "X") + "|" + (game.getPlace(row, column) == Game.Sign.ZERO ? player2.getPlayerName() : player1.getPlayerName()));
+        player2.send(RequestCodes.WIN + "|" + (game.getPlace(row, column) == Game.Sign.ZERO ? "O" : "X") + "|" + (game.getPlace(row, column) == Game.Sign.ZERO ? player2.getPlayerName() : player1.getPlayerName()));
+        if (game.getPlace(row, column) == Game.Sign.CROSS) {
+            player1.incPlayerScore();
+        } else {
+            player2.incPlayerScore();
+        }
+    }
 }
