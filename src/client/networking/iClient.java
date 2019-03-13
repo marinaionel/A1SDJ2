@@ -14,4 +14,8 @@ public interface iClient {
     void cantPlace(String reason);
 
     void validPlace(int row, int column, Game.Sign sign);
+
+    void finishedGame(String winner, String sign);
+
+    void draw();
 }

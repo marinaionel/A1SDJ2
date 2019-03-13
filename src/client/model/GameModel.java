@@ -12,9 +12,7 @@ public class GameModel implements Model {
     private iClient iClient;
     private Game game;
     private Player player;
-    private String lobbyStatus;
     private Game.Sign mySign;
-    private String message;
 
     public GameModel() {
         player = new Player();
@@ -32,7 +30,6 @@ public class GameModel implements Model {
 
     @Override
     public void setLobbyStatus(String status) {
-        lobbyStatus = status;
         support.firePropertyChange("Lobby Status", null, status);
     }
 
@@ -72,5 +69,15 @@ public class GameModel implements Model {
     public void validPlace(int row, int column, Game.Sign sign) {
         game.place(row, column, sign);
         support.firePropertyChange("placed", null, game);
+    }
+
+    @Override
+    public void finishedGame(String winner, String sign) {
+        support.firePropertyChange("GameFinished", null, winner + "|" + sign);
+    }
+
+    @Override
+    public void draw() {
+        support.firePropertyChange("draw", null, "draw");
     }
 }

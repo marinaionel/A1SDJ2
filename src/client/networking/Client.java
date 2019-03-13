@@ -55,5 +55,15 @@ public class Client implements iClient {
         model.validPlace(row, column, sign);
     }
 
+    @Override
+    public void finishedGame(String winner, String sign) {
+        model.finishedGame(winner, sign);
+    }
+
+    @Override
+    public void draw() {
+        model.draw();
+    }
+
 
 }

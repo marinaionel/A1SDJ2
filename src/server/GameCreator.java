@@ -7,8 +7,6 @@ public class GameCreator {
     private static PlayerHandler waitingPlayer = null;
 
 
-
-
     public static boolean tryPlay(PlayerHandler player) {
         if (waitingPlayer != null) {
             System.out.println(player.getPlayerName() + " wants to play...");
