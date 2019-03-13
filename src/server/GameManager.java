@@ -3,6 +3,8 @@ package server;
 import shared.model.Game;
 import shared.model.RequestCodes;
 
+import java.io.IOException;
+
 public class GameManager {
     private PlayerHandler player1;
     private PlayerHandler player2;
@@ -78,6 +80,8 @@ public class GameManager {
                 }
             }
         }
+        player1.send(RequestCodes.FULL_BOARD);
+        player2.send(RequestCodes.FULL_BOARD);
         return true;
     }
 

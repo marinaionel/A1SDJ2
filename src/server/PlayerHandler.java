@@ -72,15 +72,7 @@ public class PlayerHandler implements Runnable {
 
             if (isInGame)
                 do {
-                    if (!gameManager.isWin() && gameManager.isFull()) {
-                        try {
-                            socketOut.writeUTF(RequestCodes.FULL_BOARD);
-                            socketOut.flush();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                        break;
-                    }
+
                     try {
                         request = socketIn.readUTF();
                     } catch (IOException e) {
@@ -91,7 +83,7 @@ public class PlayerHandler implements Runnable {
                         String[] array = request.split("\\|");
                         gameManager.tryPlace(Integer.parseInt(array[1]), Integer.parseInt(array[2]), (array[3].equals("X") ? Game.Sign.CROSS : Game.Sign.ZERO));
                     }
-                } while (!gameManager.isWin());
+                } while (!gameManager.isWin()&&!gameManager.isFull());
 
             isInGame = false;
             gameManager = null;

@@ -105,7 +105,9 @@ public class GameViewModel {
             r3c1.setValue(signToString(game.getPlace(2, 0)));
             r3c2.setValue(signToString(game.getPlace(2, 1)));
             r3c3.setValue(signToString(game.getPlace(2, 2)));
+            errorLabel.setValue("");
         });
+
     }
 
     private String signToString(Game.Sign sign) {
