@@ -9,11 +9,13 @@ import shared.model.Game;
 public class GameView {
     private GameViewModel gameViewModel;
     @FXML
+    Button seeResults;
+    @FXML
+    Button tryAgain;
+    @FXML
     Label errorLabel;
     @FXML
     Label usernameLabel;
-    @FXML
-    Label turn;
     @FXML
     Label playerType;
     @FXML
@@ -36,6 +38,14 @@ public class GameView {
     Button r3c2;
     @FXML
     Button r3c3;
+
+    public void onTryAgainButton() {
+        gameViewModel.tryAgain();
+    }
+
+    public void onSeeResultsButton() {
+        gameViewModel.openResults();
+    }
 
     public void placer1c1() {
         gameViewModel.place(1, 1);

@@ -32,8 +32,8 @@ public class GameViewModel {
         model.addListener("Join game", this::joinGame);
         model.addListener("can't place", this::setErrorLabelStatus);
         model.addListener("placed", this::validPlacing);
-        model.addListener("GameFinished", this::checkFinishedGame);
-        model.addListener("draw", this::checkDraw);
+        model.addListener("GameFinished", this::finishedGame);
+        model.addListener("draw", this::draw);
         r1c1 = new SimpleStringProperty();
         r1c2 = new SimpleStringProperty();
         r1c3 = new SimpleStringProperty();
@@ -46,11 +46,11 @@ public class GameViewModel {
         winnerStatusLabel = new SimpleStringProperty();
     }
 
-    private void checkDraw(PropertyChangeEvent event) {
+    private void draw(PropertyChangeEvent event) {
         Platform.runLater(() -> winnerStatusLabel.setValue((String) event.getNewValue()));
     }
 
-    private void checkFinishedGame(PropertyChangeEvent event) {
+    private void finishedGame(PropertyChangeEvent event) {
         Platform.runLater(() -> {
             String[] arr = ((String) event.getNewValue()).split("\\|");
             winnerStatusLabel.setValue("The winner is " + arr[0] + ", sign: " + arr[1]);
@@ -91,6 +91,10 @@ public class GameViewModel {
 
     public StringProperty r3c3Property() {
         return r3c3;
+    }
+
+    public void openResults() {
+        viewHandler.openResults();
     }
 
     private void validPlacing(PropertyChangeEvent event) {
@@ -146,5 +150,9 @@ public class GameViewModel {
 
     private void setErrorLabelStatus(PropertyChangeEvent event) {
         Platform.runLater(() -> errorLabel.setValue((String) event.getNewValue()));
+    }
+
+    public void tryAgain() {
+        viewHandler.openLobby();
     }
 }

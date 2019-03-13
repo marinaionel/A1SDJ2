@@ -26,7 +26,6 @@ public class LobbyView {
 
     public void init(LobbyViewModel lobbyViewModel) {
         this.lobbyViewModel = lobbyViewModel;
-//        lobbyViewModel.playerNameProperty().bindBidirectional(playerName.textProperty());
-        lobbyViewModel.lobbyStatusLabelProperty().bindBidirectional(playerLabel.textProperty());
+        playerLabel.textProperty().bindBidirectional(lobbyViewModel.lobbyStatusLabelProperty());
     }
 }

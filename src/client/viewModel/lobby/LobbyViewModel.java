@@ -3,6 +3,7 @@ package client.viewModel.lobby;
 import client.model.Model;
 import client.view.ViewHandler;
 import javafx.application.Platform;
+import javafx.beans.binding.Bindings;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
@@ -17,13 +18,13 @@ public class LobbyViewModel {
     public LobbyViewModel(Model model, ViewHandler viewHandler) {
         this.model = model;
         this.viewHandler = viewHandler;
-
-        model.addListener("Lobby Status", this::lobbyStatusChanged);
+        playerName = new SimpleStringProperty();
         lobbyStatusLabel = new SimpleStringProperty();
+        model.addListener("Lobby Status", this::lobbyStatusChanged);
     }
 
     public void setPlayerName(String playerName1) {
-        playerName = new SimpleStringProperty(playerName1);
+        playerName.setValue(playerName1);
         model.getPlayer().setPlayerName(playerName1);
     }
 
@@ -38,5 +39,4 @@ public class LobbyViewModel {
     public void startGame() {
         model.getiClient().startGame(playerName.getValueSafe());
     }
-
 }

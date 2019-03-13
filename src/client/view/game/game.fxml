@@ -162,12 +162,12 @@
         </HBox>
       <HBox prefHeight="61.0" prefWidth="599.0" style="-fx-alignment: center;">
          <children>
-            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" styleClass="lower-buttons" text="Try again">
+            <Button fx:id="tryAgain" mnemonicParsing="false" onAction="#onTryAgainButton" prefHeight="30.0" prefWidth="150.0" styleClass="lower-buttons" text="Try again">
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" styleClass="lower-buttons" text="See results">
+            <Button fx:id="seeResults" mnemonicParsing="false" onAction="#onSeeResultsButton" prefHeight="30.0" prefWidth="150.0" styleClass="lower-buttons" text="See results">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin>

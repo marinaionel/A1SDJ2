@@ -65,5 +65,4 @@ public class Client implements iClient {
         model.draw();
     }
 
-
 }

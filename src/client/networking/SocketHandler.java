@@ -32,10 +32,7 @@ public class SocketHandler implements Runnable {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
-
             System.out.println(request);
-
 
             //waiting for one more person to press PLAY in order to start the game, or waiting for game joined message
             if (request.equals(RequestCodes.WAITING_FOR_OPPONENT)) {
