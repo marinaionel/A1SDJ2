@@ -11,4 +11,6 @@ public class RequestCodes {
     public static final String NOT_YOUR_TURN = "Not your turn!";//Can't place because it's not this player's turn
     public static final String PLACE_TAKEN = "Place taken!";//Can't place because space is taken
     public static final String FULL_BOARD = "It's a draw!";
+    public static final String GET_RESULTS_TABLE = "get results table";
+    public static final String RESULTS_TABLE_RESPONSE = "this is the results table";
 }

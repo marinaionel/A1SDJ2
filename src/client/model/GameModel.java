@@ -80,4 +80,9 @@ public class GameModel implements Model {
     public void draw() {
         support.firePropertyChange("draw", null, "It's a draw! Game over!");
     }
+
+    @Override
+    public void receiveResultsTable(Player[] arrayOfPlayers) {
+        support.firePropertyChange("array results", null, arrayOfPlayers);
+    }
 }

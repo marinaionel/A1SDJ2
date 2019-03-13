@@ -1,6 +1,7 @@
 package client.networking;
 
 import shared.model.Game;
+import shared.model.Player;
 
 public interface iClient {
     void startGame(String playerName);
@@ -18,4 +19,8 @@ public interface iClient {
     void finishedGame(String winner, String sign);
 
     void draw();
+
+    void requestResultsTable();
+
+    void receiveResultsTable(Player[] arrayOfPlayers);
 }

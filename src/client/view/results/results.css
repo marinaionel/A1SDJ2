@@ -8,6 +8,23 @@
     -fx-font-family: "Eras Medium ITC";
 }
 
+#try-again {
+    -fx-font-size: 1.5em;
+    -fx-font-family: "Eras Medium ITC";
+    -fx-text-alignment: center;
+    -fx-border-width: 2px;
+    -fx-border-color: cyan;
+    -fx-text-fill: cyan;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+
+#try-again:hover {
+    -fx-border-color: derive(cyan, -40%);
+    -fx-text-fill: derive(cyan, -40%);
+}
+
 .table-view {
     -fx-font-family: "Eras Medium ITC";
     -fx-text-alignment: center;

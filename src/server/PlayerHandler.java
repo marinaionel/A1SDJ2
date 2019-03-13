@@ -70,7 +70,7 @@ public class PlayerHandler implements Runnable {
                 }
             }
 
-            if (isInGame)
+            if (isInGame) {
                 do {
                     try {
                         request = socketIn.readUTF();
@@ -83,9 +83,19 @@ public class PlayerHandler implements Runnable {
                         gameManager.tryPlace(Integer.parseInt(array[1]), Integer.parseInt(array[2]), (array[3].equals("X") ? Game.Sign.CROSS : Game.Sign.ZERO));
                     }
                 } while (!gameManager.isWin() && !gameManager.isFull());
+            }
             isInGame = false;
             gameManager = null;
-
+            if (request.contains(RequestCodes.GET_RESULTS_TABLE)) {
+                try {
+                    socketOut.writeUTF(RequestCodes.RESULTS_TABLE_RESPONSE);
+                    socketOut.flush();
+                    socketOut.writeObject(PlayerList.getPlayers());
+                    socketOut.flush();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 

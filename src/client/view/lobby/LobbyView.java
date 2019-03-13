@@ -17,7 +17,7 @@ public class LobbyView {
 
     public void onPlayButton() {
         if (playerName.getText().equals("") || playerName.getText() == null) {
-            playerName.setText("write a valid name");
+            playerLabel.setText("write a valid name");
         } else {
             lobbyViewModel.setPlayerName(playerName.getText());
             lobbyViewModel.startGame();

@@ -44,6 +44,7 @@ public class GameView {
     }
 
     public void onSeeResultsButton() {
+        gameViewModel.requestResultsTable();
         gameViewModel.openResults();
     }
 

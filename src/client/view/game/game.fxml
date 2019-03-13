@@ -19,6 +19,9 @@
                     <font>
                         <Font size="22.0" />
                     </font>
+               <effect>
+                  <Glow />
+               </effect>
                 </Label>
                 <Label fx:id="usernameLabel" styleClass="label-normal" text="username">
                     <HBox.margin>
@@ -27,6 +30,9 @@
                     <font>
                         <Font size="22.0" />
                     </font>
+               <effect>
+                  <Glow />
+               </effect>
                 </Label>
             </children>
         </HBox>
@@ -111,6 +117,9 @@
                     </effect>
                 </Button>
             </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
         </HBox>
         <HBox layoutX="10.0" layoutY="140.0" style="-fx-alignment: center;">
             <children>
@@ -137,6 +146,9 @@
                     <effect>
                         <Glow />
                     </effect>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
                 </Button>
             </children>
         </HBox>
@@ -166,6 +178,9 @@
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>
+               <effect>
+                  <Glow />
+               </effect>
             </Button>
             <Button fx:id="seeResults" mnemonicParsing="false" onAction="#onSeeResultsButton" prefHeight="30.0" prefWidth="150.0" styleClass="lower-buttons" text="See results">
                <HBox.margin>

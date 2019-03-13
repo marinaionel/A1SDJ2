@@ -2,6 +2,7 @@ package client.networking;
 
 import client.model.Model;
 import shared.model.Game;
+import shared.model.Player;
 
 import java.io.IOException;
 import java.net.Socket;
@@ -63,6 +64,16 @@ public class Client implements iClient {
     @Override
     public void draw() {
         model.draw();
+    }
+
+    @Override
+    public void requestResultsTable() {
+        socketHandler.requestResultsTable();
+    }
+
+    @Override
+    public void receiveResultsTable(Player[] arrayOfPlayers) {
+        model.receiveResultsTable(arrayOfPlayers);
     }
 
 }

@@ -155,4 +155,8 @@ public class GameViewModel {
     public void tryAgain() {
         viewHandler.openLobby();
     }
+
+    public void requestResultsTable() {
+        model.getiClient().requestResultsTable();
+    }
 }

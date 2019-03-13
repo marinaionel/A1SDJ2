@@ -28,4 +28,6 @@ public interface Model {
     void finishedGame(String winner, String sign);
 
     void draw();
+
+    void receiveResultsTable(Player[] arrayOfPlayers);
 }

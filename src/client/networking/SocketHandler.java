@@ -1,6 +1,7 @@
 package client.networking;
 
 import shared.model.Game;
+import shared.model.Player;
 import shared.model.RequestCodes;
 
 import java.io.IOException;
@@ -79,7 +80,25 @@ public class SocketHandler implements Runnable {
             if (request.equals(RequestCodes.FULL_BOARD)) {
                 client.draw();
             }
+            if (request.equals(RequestCodes.RESULTS_TABLE_RESPONSE)) {
+                try {
+                    Player[] arrayOfPlayers = (Player[]) inFromServer.readObject();
+                    client.receiveResultsTable(arrayOfPlayers);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
 
+    public void requestResultsTable() {
+        try {
+            outToServer.writeUTF(RequestCodes.GET_RESULTS_TABLE);
+            outToServer.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
