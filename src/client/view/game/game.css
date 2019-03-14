@@ -32,7 +32,11 @@
     -fx-text-fill: derive(cyan, -40%);
 }
 
+.small-error-labels {
+    -fx-text-fill: #F44336;
+}
+
 #er {
-    -fx-text-fill: #ff2525;
+    -fx-text-fill: #F44336;
     -fx-font-size: 1.5em;
 }

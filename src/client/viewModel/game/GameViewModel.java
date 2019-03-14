@@ -94,6 +94,7 @@ public class GameViewModel {
     }
 
     public void openResults() {
+        model.getiClient().requestResultsTable();
         viewHandler.openResults();
     }
 
@@ -154,9 +155,5 @@ public class GameViewModel {
 
     public void tryAgain() {
         viewHandler.openLobby();
-    }
-
-    public void requestResultsTable() {
-        model.getiClient().requestResultsTable();
     }
 }

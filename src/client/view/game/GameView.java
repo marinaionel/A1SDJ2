@@ -9,6 +9,8 @@ import shared.model.Game;
 public class GameView {
     private GameViewModel gameViewModel;
     @FXML
+    Label errorLabelForButtons;
+    @FXML
     Button seeResults;
     @FXML
     Button tryAgain;
@@ -40,12 +42,19 @@ public class GameView {
     Button r3c3;
 
     public void onTryAgainButton() {
-        gameViewModel.tryAgain();
+        if (winnerLabel.getText() == null) {
+            errorLabelForButtons.setText("You can try again after finishing the game!");
+        } else {
+            gameViewModel.tryAgain();
+        }
     }
 
     public void onSeeResultsButton() {
-        gameViewModel.requestResultsTable();
-        gameViewModel.openResults();
+        if (winnerLabel.getText() == null) {
+            errorLabelForButtons.setText("You can see the results table after finishing the game!");
+        } else {
+            gameViewModel.openResults();
+        }
     }
 
     public void placer1c1() {
@@ -91,6 +100,7 @@ public class GameView {
         winnerLabel.setText("");
         errorLabel.setText("");
         errorLabel.textProperty().bindBidirectional(gameViewModel.errorLabelProperty());
+        errorLabelForButtons.setText("");
         r1c1.textProperty().bindBidirectional(gameViewModel.r1c1Property());
         r1c2.textProperty().bindBidirectional(gameViewModel.r1c2Property());
         r1c3.textProperty().bindBidirectional(gameViewModel.r1c3Property());
