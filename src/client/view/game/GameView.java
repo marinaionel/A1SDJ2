@@ -59,38 +59,47 @@ public class GameView {
 
     public void placer1c1() {
         gameViewModel.place(1, 1);
+        errorLabelForButtons.setText("");
     }
 
     public void placer1c2() {
         gameViewModel.place(1, 2);
+        errorLabelForButtons.setText("");
     }
 
     public void placer1c3() {
         gameViewModel.place(1, 3);
+        errorLabelForButtons.setText("");
     }
 
     public void placer2c1() {
         gameViewModel.place(2, 1);
+        errorLabelForButtons.setText("");
     }
 
     public void placer2c2() {
         gameViewModel.place(2, 2);
+        errorLabelForButtons.setText("");
     }
 
     public void placer2c3() {
         gameViewModel.place(2, 3);
+        errorLabelForButtons.setText("");
     }
 
     public void placer3c1() {
         gameViewModel.place(3, 1);
+        errorLabelForButtons.setText("");
     }
 
     public void placer3c2() {
         gameViewModel.place(3, 2);
+        errorLabelForButtons.setText("");
     }
 
     public void placer3c3() {
         gameViewModel.place(3, 3);
+        errorLabelForButtons.setText("");
     }
 
     public void init(GameViewModel gameViewModel) {
