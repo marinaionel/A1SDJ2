@@ -1,0 +1,41 @@
+.back {
+    -fx-alignment: center;
+    -fx-background-color: linear-gradient(#fc466b, #3f5efb);
+}
+
+.label-normal {
+    -fx-text-fill: white;
+    -fx-font-family: "Eras Medium ITC";
+}
+
+.playbuttons {
+    -fx-font-size: 6em;
+}
+
+.lower-buttons {
+    -fx-font-size: 1.5em;
+}
+
+.playbuttons, .lower-buttons {
+    -fx-font-family: "Eras Medium ITC";
+    -fx-text-alignment: center;
+    -fx-border-width: 2px;
+    -fx-border-color: white;
+    -fx-text-fill: white;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.playbuttons:hover, .lower-buttons:hover {
+    -fx-text-fill: derive(white, -40%);
+    -fx-border-color: derive(white, -40%);
+}
+
+.small-error-labels, #er {
+    -fx-text-fill: #F20707;
+}
+
+#er {
+    -fx-font-size: 1.5em;
+}

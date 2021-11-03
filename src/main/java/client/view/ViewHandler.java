@@ -12,6 +12,7 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
 
 public class ViewHandler {
     private ViewModelProvider viewModelProvider;
@@ -30,8 +31,8 @@ public class ViewHandler {
     public void openLobby() {
         FXMLLoader loader = new FXMLLoader();
 
-        loader.setLocation(getClass().getResource("lobby/lobby.fxml"));
-        Parent root = null;
+        loader.setLocation(getClass().getClassLoader().getResource("lobby/lobby.fxml"));
+        Parent root;
         try {
             root = loader.load();
         } catch (IOException e) {
@@ -49,7 +50,7 @@ public class ViewHandler {
     public void openGame() {
         FXMLLoader loader = new FXMLLoader();
 
-        loader.setLocation(getClass().getResource("game/game.fxml"));
+        loader.setLocation(getClass().getClassLoader().getResource("game/game.fxml"));
         Parent root = null;
         try {
             root = loader.load();
@@ -68,7 +69,7 @@ public class ViewHandler {
     public void openResults() {
         FXMLLoader loader = new FXMLLoader();
 
-        loader.setLocation(getClass().getResource("results/results.fxml"));
+        loader.setLocation(getClass().getClassLoader().getResource("results/results.fxml"));
         Parent root = null;
         try {
             root = loader.load();

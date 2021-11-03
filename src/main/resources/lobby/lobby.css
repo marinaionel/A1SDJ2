@@ -1,0 +1,37 @@
+.back {
+    -fx-alignment: center;
+    -fx-background-color: linear-gradient(#fc466b, #3f5efb);
+}
+
+.playbutton {
+    -fx-font-size: 2em;
+    -fx-font-family: "Eras Medium ITC";
+    -fx-text-alignment: center;
+    -fx-border-width: 2px;
+    -fx-border-color: white;
+    -fx-text-fill: white;
+    -fx-border-radius: 50%;
+    -fx-padding: 1em 2em 0.9em 2em;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.playbutton:hover {
+    -fx-border-color: derive(white, -40%);
+    -fx-text-fill: derive(white, -40%);
+}
+
+#playerlabel, .text-field, #usernamelabel {
+    -fx-text-alignment: center;
+    -fx-font-family: "Eras Medium ITC";
+    -fx-text-fill: white;
+}
+
+.text-field {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-background-color: transparent;
+    -fx-border-radius: 50%;
+    -fx-border-color: white;
+}
