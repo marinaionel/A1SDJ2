@@ -13,6 +13,7 @@ public class SocketHandler implements Runnable {
     private ObjectOutputStream outToServer;
     private ObjectInputStream inFromServer;
     private Client client;
+    private boolean gameOn = false;
 
     public SocketHandler(Socket socket, Client client) {
         this.client = client;
@@ -31,6 +32,7 @@ public class SocketHandler implements Runnable {
             try {
                 request = inFromServer.readUTF();
             } catch (IOException e) {
+
                 e.printStackTrace();
             }
             System.out.println(request);
@@ -45,12 +47,11 @@ public class SocketHandler implements Runnable {
                 }
                 System.out.println(request);
                 if (request.contains(RequestCodes.JOINED_GAME)) {
-                    client.joinGame(request.split("\\|")[1].equals("X") ? Game.Sign.CROSS : Game.Sign.ZERO);
+                    client.startGame(request.split("\\|")[1].equals("X") ? Game.Sign.CROSS : Game.Sign.ZERO);
                 }
             } else if (request.contains(RequestCodes.JOINED_GAME)) {
-                client.joinGame(request.split("\\|")[1].equals("X") ? Game.Sign.CROSS : Game.Sign.ZERO);
+                client.startGame(request.split("\\|")[1].equals("X") ? Game.Sign.CROSS : Game.Sign.ZERO);
             }
-
 
             //players are in the game now
             do {
@@ -80,30 +81,39 @@ public class SocketHandler implements Runnable {
             if (request.equals(RequestCodes.FULL_BOARD)) {
                 client.draw();
             }
-            if (request.equals(RequestCodes.RESULTS_TABLE_RESPONSE)) {
+
+            gameOn = false;
+            while (!gameOn) {
                 try {
-                    Player[] arrayOfPlayers = (Player[]) inFromServer.readObject();
-                    client.receiveResultsTable(arrayOfPlayers);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                } catch (ClassNotFoundException e) {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }
         }
     }
 
-    public void requestResultsTable() {
+    public Player[] getResultsTables() {
+        Player[] players = null;
         try {
             outToServer.writeUTF(RequestCodes.GET_RESULTS_TABLE);
             outToServer.flush();
         } catch (IOException e) {
             e.printStackTrace();
         }
+        try {
+            players = (Player[]) inFromServer.readObject();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return players;
     }
 
     //when a player pressed "PLAY" button
     public void startGame(String playerName) {
+        gameOn = true;
         try {
             outToServer.writeUTF(RequestCodes.PLAY + "|" + playerName);
             outToServer.flush();

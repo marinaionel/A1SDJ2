@@ -27,7 +27,7 @@ public class Client implements iClient {
     }
 
     @Override
-    public void startGame(String playerName) {
+    public void play(String playerName) {
         socketHandler.startGame(playerName);
     }
 
@@ -42,7 +42,7 @@ public class Client implements iClient {
     }
 
     @Override
-    public void joinGame(Game.Sign sign) {
+    public void startGame(Game.Sign sign) {
         model.joinGame(sign);
     }
 
@@ -67,13 +67,8 @@ public class Client implements iClient {
     }
 
     @Override
-    public void requestResultsTable() {
-        socketHandler.requestResultsTable();
-    }
-
-    @Override
-    public void receiveResultsTable(Player[] arrayOfPlayers) {
-        model.receiveResultsTable(arrayOfPlayers);
+    public Player[] getResultsTable() {
+        return socketHandler.getResultsTables();
     }
 
 }

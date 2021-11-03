@@ -29,5 +29,10 @@ public interface Model {
 
     void draw();
 
-    void receiveResultsTable(Player[] arrayOfPlayers);
+
+    Game getGame();
+
+    void refreshPlayerList();
+
+    Player[] getPlayers();
 }

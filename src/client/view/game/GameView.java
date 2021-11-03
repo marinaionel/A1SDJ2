@@ -42,7 +42,7 @@ public class GameView {
     Button r3c3;
 
     public void onTryAgainButton() {
-        if (winnerLabel.getText() == null) {
+        if (winnerLabel.getText() == null || winnerLabel.getText().equals("")) {
             errorLabelForButtons.setText("You can try again after finishing the game!");
         } else {
             gameViewModel.tryAgain();
@@ -50,7 +50,7 @@ public class GameView {
     }
 
     public void onSeeResultsButton() {
-        if (winnerLabel.getText() == null) {
+        if (winnerLabel.getText() == null || winnerLabel.getText().equals("")) {
             errorLabelForButtons.setText("You can see the results table after finishing the game!");
         } else {
             gameViewModel.openResults();

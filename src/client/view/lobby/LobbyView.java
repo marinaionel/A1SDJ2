@@ -20,12 +20,15 @@ public class LobbyView {
             playerLabel.setText("write a valid name");
         } else {
             lobbyViewModel.setPlayerName(playerName.getText());
-            lobbyViewModel.startGame();
+            lobbyViewModel.play();
+            playButton.setDisable(true);
         }
     }
 
     public void init(LobbyViewModel lobbyViewModel) {
         this.lobbyViewModel = lobbyViewModel;
+        playButton.setDisable(false);
         playerLabel.textProperty().bindBidirectional(lobbyViewModel.lobbyStatusLabelProperty());
+        lobbyViewModel.resetLabel();
     }
 }

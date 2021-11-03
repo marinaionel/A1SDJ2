@@ -9,8 +9,8 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import shared.model.Player;
 
-import java.beans.PropertyChangeEvent;
-import java.util.List;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class ResultsViewModel {
     private Model model;
@@ -21,18 +21,15 @@ public class ResultsViewModel {
         this.viewHandler = viewHandler;
         this.model = model;
         listOfPlayers = new SimpleListProperty<>(FXCollections.observableArrayList());
-        model.addListener("array results", this::receivedResultsTable);
-    }
-
-    private void receivedResultsTable(PropertyChangeEvent event) {
-        Player[] arr = (Player[]) event.getNewValue();
-        ObservableList<Player> list = (ObservableList<Player>) List.of(arr);
-        Platform.runLater(() -> {
-            listOfPlayers.setValue(list);
-        });
     }
 
     public ListProperty<Player> getItemsList() {
+        ArrayList<Player> list = new ArrayList<>(Arrays.asList(model.getPlayers()));
+        ObservableList<Player> list1 = FXCollections.observableArrayList(list);
+        Platform.runLater(() -> {
+            listOfPlayers.setValue(list1);
+        });
+        System.out.println(list.get(0));
         return listOfPlayers;
     }
 

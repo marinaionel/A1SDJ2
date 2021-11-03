@@ -14,15 +14,15 @@ public class ResultsView {
     @FXML
     TableView<Player> tableView;
     @FXML
-    TableColumn<String, Player> playerColumn;
+    TableColumn<String, Player> playerNameColumn;
     @FXML
     TableColumn<String, Player> scoreColumn;
     private ResultsViewModel resultsViewModel;
 
     public void init(ResultsViewModel resultsViewModel) {
         this.resultsViewModel = resultsViewModel;
-        playerColumn.setCellValueFactory(new PropertyValueFactory<>("Player"));
-        scoreColumn.setCellValueFactory(new PropertyValueFactory<>("Score"));
+        playerNameColumn.setCellValueFactory(new PropertyValueFactory<>("playerName"));
+        scoreColumn.setCellValueFactory(new PropertyValueFactory<>("score"));
         tableView.itemsProperty().bind(resultsViewModel.getItemsList());
     }
 

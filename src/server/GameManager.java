@@ -3,13 +3,12 @@ package server;
 import shared.model.Game;
 import shared.model.RequestCodes;
 
-import java.io.IOException;
-
 public class GameManager {
     private PlayerHandler player1;
     private PlayerHandler player2;
     private Game game;
     private Game.Sign turn; //indicates who's turn is it now;
+    private boolean gameOn = true;//while no one won the game is on. If someone wins or there is a draw, the gameOn will be false;
 
     public GameManager(PlayerHandler player1, PlayerHandler player2) {
         game = new Game();
@@ -82,6 +81,7 @@ public class GameManager {
         }
         player1.send(RequestCodes.FULL_BOARD);
         player2.send(RequestCodes.FULL_BOARD);
+        gameOn = false;
         return true;
     }
 
@@ -93,5 +93,10 @@ public class GameManager {
         } else {
             player2.incPlayerScore();
         }
+        gameOn = false;
+    }
+
+    public boolean isGameOn() {
+        return gameOn;
     }
 }

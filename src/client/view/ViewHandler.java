@@ -8,6 +8,7 @@ import client.viewModel.ViewModelProvider;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -18,6 +19,7 @@ public class ViewHandler {
 
     public ViewHandler(Stage stage, Model model) {
         mainStage = stage;
+        mainStage.getIcons().add(new Image("file:icon/xo.png"));
         viewModelProvider = new ViewModelProvider(model, this);
     }
 
@@ -33,7 +35,7 @@ public class ViewHandler {
         try {
             root = loader.load();
         } catch (IOException e) {
-            e.printStackTrace();
+            return;
         }
         LobbyView view = loader.getController();
         view.init(viewModelProvider.getLobbyViewModel());
@@ -52,7 +54,7 @@ public class ViewHandler {
         try {
             root = loader.load();
         } catch (IOException e) {
-            e.printStackTrace();
+            return;
         }
         GameView view = loader.getController();
         view.init(viewModelProvider.getGameViewModel());
@@ -71,7 +73,7 @@ public class ViewHandler {
         try {
             root = loader.load();
         } catch (IOException e) {
-            e.printStackTrace();
+            return;
         }
         ResultsView view = loader.getController();
         view.init(viewModelProvider.getResultsViewModel());

@@ -4,13 +4,13 @@ import shared.model.Game;
 import shared.model.Player;
 
 public interface iClient {
-    void startGame(String playerName);
+    void play(String playerName);
 
     void place(int row, int column, Game.Sign sign);
 
     void changeLabelStatus(String status);
 
-    void joinGame(Game.Sign sign);
+    void startGame(Game.Sign sign);
 
     void cantPlace(String reason);
 
@@ -20,7 +20,5 @@ public interface iClient {
 
     void draw();
 
-    void requestResultsTable();
-
-    void receiveResultsTable(Player[] arrayOfPlayers);
+    Player[] getResultsTable();
 }

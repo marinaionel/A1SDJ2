@@ -94,13 +94,17 @@ public class GameViewModel {
     }
 
     public void openResults() {
-        model.getiClient().requestResultsTable();
+        model.refreshPlayerList();
         viewHandler.openResults();
     }
 
     private void validPlacing(PropertyChangeEvent event) {
-        Game game = (Game) event.getNewValue();
+        refreshBoard();
+    }
+
+    public void refreshBoard() {
         Platform.runLater(() -> {
+            Game game = model.getGame();
             r1c1.setValue(signToString(game.getPlace(0, 0)));
             r1c2.setValue(signToString(game.getPlace(0, 1)));
             r1c3.setValue(signToString(game.getPlace(0, 2)));
@@ -112,7 +116,6 @@ public class GameViewModel {
             r3c3.setValue(signToString(game.getPlace(2, 2)));
             errorLabel.setValue("");
         });
-
     }
 
     private String signToString(Game.Sign sign) {
@@ -123,9 +126,14 @@ public class GameViewModel {
         return "";
     }
 
+    public void resetWinnerLabel() {
+        Platform.runLater(() -> winnerStatusLabel.setValue(""));
+    }
+
     //when an opponent is found this method will be called
     private void joinGame(PropertyChangeEvent evt) {
-        //TODO get sign from evt and display it in GUI
+        refreshBoard();
+        resetWinnerLabel();
         Platform.runLater(() -> viewHandler.openGame());
     }
 

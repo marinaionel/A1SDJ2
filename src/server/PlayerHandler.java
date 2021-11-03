@@ -45,14 +45,15 @@ public class PlayerHandler implements Runnable {
             socketIn = new ObjectInputStream(socket.getInputStream());
             socketOut = new ObjectOutputStream(socket.getOutputStream());
         } catch (IOException e) {
-            e.printStackTrace();
+            return;
         }
         while (true) {
-            try {
-                request = socketIn.readUTF();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            if (!request.contains(RequestCodes.PLAY))
+                try {
+                    request = socketIn.readUTF();
+                } catch (IOException e) {
+                    return;
+                }
             System.out.println(request);
 
             if (request.contains(RequestCodes.PLAY)) {
@@ -64,36 +65,41 @@ public class PlayerHandler implements Runnable {
                     try {
                         socketOut.writeUTF(RequestCodes.WAITING_FOR_OPPONENT);
                         socketOut.flush();
+                        request = "";
                     } catch (IOException e) {
-                        e.printStackTrace();
+                        return;
                     }
                 }
             }
 
             if (isInGame) {
                 do {
-                    try {
-                        request = socketIn.readUTF();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+                    //this if is for avoiding double click when the X player starts the game
+                    if (!request.contains(RequestCodes.TRY_PLACE))
+                        try {
+                            request = socketIn.readUTF();
+                        } catch (IOException e) {
+                            return;
+                        }
+                    if (!gameManager.isGameOn())
+                        break;
                     System.out.println(request);
                     if (request.contains(RequestCodes.TRY_PLACE)) {
                         String[] array = request.split("\\|");
                         gameManager.tryPlace(Integer.parseInt(array[1]), Integer.parseInt(array[2]), (array[3].equals("X") ? Game.Sign.CROSS : Game.Sign.ZERO));
                     }
+                    request = "";
                 } while (!gameManager.isWin() && !gameManager.isFull());
             }
             isInGame = false;
             gameManager = null;
             if (request.contains(RequestCodes.GET_RESULTS_TABLE)) {
                 try {
-                    socketOut.writeUTF(RequestCodes.RESULTS_TABLE_RESPONSE);
-                    socketOut.flush();
                     socketOut.writeObject(PlayerList.getPlayers());
                     socketOut.flush();
                 } catch (IOException e) {
-                    e.printStackTrace();
+                    PlayerList.removePlayer(player);
+                    return;
                 }
             }
         }

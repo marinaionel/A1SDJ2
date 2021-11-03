@@ -3,7 +3,6 @@ package client.viewModel.lobby;
 import client.model.Model;
 import client.view.ViewHandler;
 import javafx.application.Platform;
-import javafx.beans.binding.Bindings;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
@@ -32,11 +31,15 @@ public class LobbyViewModel {
         Platform.runLater(() -> lobbyStatusLabel.setValue((String) event.getNewValue()));
     }
 
+    public void resetLabel() {
+        Platform.runLater(() -> lobbyStatusLabel.setValue(""));
+    }
+
     public StringProperty lobbyStatusLabelProperty() {
         return lobbyStatusLabel;
     }
 
-    public void startGame() {
-        model.getiClient().startGame(playerName.getValueSafe());
+    public void play() {
+        model.getiClient().play(playerName.getValueSafe());
     }
 }

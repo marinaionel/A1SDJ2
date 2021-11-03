@@ -13,6 +13,7 @@ public class GameModel implements Model {
     private Game game;
     private Player player;
     private Game.Sign mySign;
+    private Player[] players;
 
     public GameModel() {
         player = new Player();
@@ -46,8 +47,8 @@ public class GameModel implements Model {
     @Override
     public void joinGame(Game.Sign sign) {
         mySign = sign;
-        support.firePropertyChange("Join game", null, sign);
         game = new Game();
+        support.firePropertyChange("Join game", null, sign);
     }
 
     @Override
@@ -82,7 +83,18 @@ public class GameModel implements Model {
     }
 
     @Override
-    public void receiveResultsTable(Player[] arrayOfPlayers) {
-        support.firePropertyChange("array results", null, arrayOfPlayers);
+    public Game getGame() {
+        return game;
     }
+
+    @Override
+    public void refreshPlayerList() {
+        players = iClient.getResultsTable();
+    }
+
+    @Override
+    public Player[] getPlayers() {
+        return players;
+    }
+
 }
